@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <table width=700px;>
+        <tr>
+            <td><b>Простая форма поиска с вариантами:</b></td>
+            <td><b>Простая форма поиска с вариантами:</b></td>
+        </tr>
+        <tr>
+    <td>
+        <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Строка поиска</legend>
+            <input type="text" maxlength="10">
+            <input type="submit" value="Искать">
+        </fieldse><br>
+        <label>
+            <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте
+        </label>
+        <label>
+            <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0" checked>в google<br>
+            <i>Длина запроса не более 10 символов</i>
+        </label>
+    </form>
+    </td>
+    <td><br>
+        <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Строка поиска</legend>
+            <input type="text" maxlength="10" autofocus>*
+            <input type="submit" value="Искать">
+        </fieldse><br>
+        <label>
+            <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте
+        </label>
+        <label>
+            <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0" checked>в google<br>
+            <i>* - обязательное поле<br>
+                Автофокус в поле поиска</i>
+        </label>
+    </form>
+    </td>
+    </tr>
+    </table>
+</body>
+</html>
