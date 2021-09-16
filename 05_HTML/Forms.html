@@ -8,24 +8,25 @@
 </head>
 <body>
     <table width=700px;>
-        <tr>
-            <td><b>Простая форма поиска с вариантами:</b></td>
-            <td><b>Простая форма поиска с вариантами:</b></td>
-        </tr>
-        <tr>
+    <tr>
+        <td><h4>Простая форма поиска с вариантами:</h4></td>
+        <td><h4>Простая форма поиска с вариантами:</h4></td>
+    </tr>    
+    <tr>
     <td>
         <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
             <legend>Строка поиска</legend>
             <input type="text" maxlength="10">
             <input type="submit" value="Искать">
-        </fieldse><br>
+        <br>
         <label>
             <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте
         </label>
         <label>
             <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0" checked>в google<br>
             <i>Длина запроса не более 10 символов</i>
+        </fieldset>
         </label>
     </form>
     </td>
@@ -35,7 +36,7 @@
             <legend>Строка поиска</legend>
             <input type="text" maxlength="10" autofocus>*
             <input type="submit" value="Искать">
-        </fieldse><br>
+        <br>
         <label>
             <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте
         </label>
@@ -44,9 +45,55 @@
             <i>* - обязательное поле<br>
                 Автофокус в поле поиска</i>
         </label>
+        </fieldset>
     </form>
     </td>
     </tr>
+    <tr>
+        <td><h4>Простая форма авторизации:</h4></td>
+        <td><h4>Опрос(голосование):</h4></td>
+    </tr>
+    <tr>
+    <td>
+    <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Авторизуйтесь</legend>
+        <input type="text" id="login" name="login" autofocus><label for="login">* Логин</label><br>
+        <input type="password" id="pass" name="password"><label for="pass">* Пароль</label><br>
+        <input type="checkbox">Оставаться в системе<br>
+        <label>
+            <input type="submit" value="Войти"><br>
+        </label>    
+        <label>
+        * - <i>обязательное поле</i>
+        </label>
+        </fieldset>
+    </td>
+    <td>
+    </form>
+    <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Как Вам?</legend>
+            <label>
+                <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>ничего<br>
+            </label>
+            <label>
+                <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0" checked>неплохо<br>
+            </label>
+            <label>
+                <input type="radio" name="radio_group" value="value_03" id="Checkbox_Group3_0" checked>хорошо<br>
+            </label>
+            <label>
+                <input type="radio" name="radio_group" value="value_03" id="Checkbox_Group4_0" checked>супер<br>
+            </label>
+            <label>
+                <input type="submit" value="Отправить"><br>
+            </label>        
+                <i>Есть скрытое поле<br>
+                    name=date_voite, value="2013.12.31"</i>       
+        </fieldset>
+    </form>
+    </td>
     </table>
 </body>
 </html>
