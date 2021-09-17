@@ -68,9 +68,9 @@
         * - <i>обязательное поле</i>
         </label>
         </fieldset>
+    </form>    
     </td>
     <td>
-    </form>
     <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
             <legend>Как Вам?</legend>
@@ -94,6 +94,61 @@
         </fieldset>
     </form>
     </td>
-    </table>
+    <tr>
+        <td><h4>Отзыв:</h4></td>
+        <td><h4>Выпадающий и мульти списки:</h4></td>
+    </tr>
+    <tr>
+        <td>  
+    <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Оставьте Ваш отзыв</legend>
+        <input type="text">* Имя</label><br>
+        <input type="text" id="login" name="login" autofocus><label for="login">* e-mail</label><br>
+        <label>
+            <textarea name="text_area" lang="ru">форма отправки</textarea><br>
+            <input type="submit" value="Отправить"><br>
+        </label>    
+        <label>
+        * - <i>обязательное поле<br>
+         поле email - с проверкой<br>
+         метод POST</i>
+        </label>
+        </fieldset>
+    </form></td>
+    <td>    
+    <form id="my_form" name="user_data" method="POST" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Города РБ</legend>
+        <label>
+            <select name="list" id="list">
+                <optgroup label="Города РБ">
+                    <option value="1">Брест</option>
+                    <option value="2">Минск</option>
+                    <option value="3">Витебск</option>
+                </optgroup>
+                <optgroup label="Города России">
+                    <option value="4">Москва</option>
+                    <option value="5">Рязань</option>
+                    <option value="6">Магадан</option>
+                </optgroup>
+            </select>
+            <select name="list[]" size="8" id="list">
+                <optgroup label="Города РБ">
+                    <option value="1">Брест</option>
+                    <option value="2">Минск</option>
+                    <option value="3">Витебск</option>
+                </optgroup>
+                <optgroup label="Города России">
+                    <option value="4">Москва</option>
+                    <option value="5">Рязань</option>
+                    <option value="6">Магадан</option>
+                </optgroup>
+            </select>
+            <input type="submit" value="Ок"><br>
+        </label>    
+        </fieldset>
+    </form></td>
+    </tr>    
 </body>
 </html>
