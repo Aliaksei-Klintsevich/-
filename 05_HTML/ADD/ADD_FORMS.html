@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD_FORMS</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Заполните анкету</h1>
+    <form>
+        <fieldset>
+            <legend>Интересы</legend>
+    <form id="form_1" name="user_data" method="POST" action="http://fe.it-academy.by/TestForm.php">
+        <fieldset>
+            <legend>Хобби</legend>
+        <input type="checkbox">Рыбалка<br> 
+        <input type="checkbox">Астрономия<br>
+        <input type="checkbox">Дайвинг<br>
+        <input type="checkbox">Марки 
+        </fieldset>
+    </form>
+    <form id="form_2" name="user_data" method="POST" action="http://fe.it-academy.by/TestForm.php">
+        <fieldset>
+            <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+        <label>
+            <select name="list[]" size="12" id="list">
+                <optgroup label="Попугаи">
+                    <option value="1">Волнистый</option>
+                    <option value="2">Ара</option>
+                    <option value="3">Неразлучник</option>
+                </optgroup>
+                <optgroup label="Рыба">
+                    <option value="4">Караси</option>
+                    <option value="5">Окуни</option>
+                    <option value="6">Осётр</option>
+                </optgroup>
+                <optgroup label="Птицы">
+                    <option value="4">Стая ворон</option>
+                    <option value="5">Аист</option>
+                    <option value="6">Археоптерикс</option>
+                </optgroup>
+            </select>
+        </label>    
+        </fieldset>
+    </form>
+    </fieldset>    
+    </form>
+</body>
+</html>
