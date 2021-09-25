@@ -1,0 +1,9 @@
+.cont{
+    background-color: black;
+    color: darkgreen;
+    width: 400px;
+    overflow: auto;
+}
+.list {
+    width: 350px;
+}
