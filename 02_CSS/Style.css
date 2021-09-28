@@ -7,3 +7,23 @@
 .list {
     width: 350px;
 }
+.leftblock{
+    width: 15em;
+    background-color: blueviolet;
+    float: left;
+}
+.article {
+    background-color: cornsilk;
+    margin-bottom: 1em;
+    margin-left: 15em;
+}
+.bottom {
+    background-color: darkblue;
+    color: white;
+    clear: both;
+}
+.img {
+    display: block;
+    margin: auto;
+    margin-right: 10px;
+}
