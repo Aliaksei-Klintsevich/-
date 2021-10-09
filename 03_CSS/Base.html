@@ -6,40 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base</title>
     <style>
-div.MenuLevel1 { 
+    .MenuLevel1 { 
         width: 100px; display: inline; padding: 22px;
     }
-    div.MenuLevel1 > div { background-color: yellow; border: solid blue 1px; position: relative; cursor: pointer;
+    .MenuLevel1 > div { background-color: yellow; border: solid blue 1px; position: relative; cursor: pointer;
     }
-    div.MenuLevel2 { 
+    .MenuLevel2 { 
         width: 100px; display: none;
     }
-    div.MenuLevel2 > div { 
+    .MenuLevel2 > div { 
          background-color: cyan; border: solid blue 1px; cursor: pointer; padding: 13px;
     }
-    div.MenuLevel1 > div:hover div.MenuLevel2 { 
+    .MenuLevel1 > div:hover div.MenuLevel2 { 
         display: block; position: absolute; left: 0%; top: 100%; z-index: 1; 
     }    
-    div.MenuLevel1 > div:hover{
+    .MenuLevel1 > div:hover{
         background-color: blue;
     }
-    div.MenuLevel2 > div:hover{
+    .MenuLevel2 > div:hover{
         background-color: blue;
     }   
         @media all and (max-width:800px)
 {
-    div.MenuLevel1 { 
+    .MenuLevel1 { 
         width: 100px; display: inline-block;
     }
-    div.MenuLevel1 > div { background-color: yellow; border: solid blue 1px; position: relative; cursor: pointer;
+    .MenuLevel1 > div { background-color: yellow; border: solid blue 1px; position: relative; cursor: pointer;
     }
-    div.MenuLevel2 { 
+    .MenuLevel2 { 
         width: 100px; display: none;
     }
-    div.MenuLevel2 > div { 
-         background-color: cyan; border: solid blue 1px; cursor: pointer;
+    .MenuLevel2 > div { 
+         background-color: cyan; border: solid blue 1px; cursor: pointer; 
     }
-    div.MenuLevel1 > div:hover div.MenuLevel2 { 
+    .MenuLevel1 > div:hover div.MenuLevel2 { 
         display: block; position: absolute; left: 100%; top: 0%; z-index: 1;
     }
 }
