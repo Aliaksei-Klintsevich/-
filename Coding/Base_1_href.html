@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base_1_href</title>
+    <style>
+        body{
+            background-color: cyan;
+            padding: 30pt;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+        }
+        div{
+            padding: 30px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordBox");
+            var passwordText = password.value;
+            if(passwordText == "Ernest300") {
+                return true;
+            }
+            alert("Доступ запрещен! Неверный пароль!");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>НАЙДЕН АЛМАЗ МОНАХ</h1>
+    <div>
+        <p>Для входа на сайт введите, пожалуйста, пароль.</p>
+        <p>Пароль:<input id="passwordBox" type="password"></p>
+        <p><a href="../Coding/Base_1.html" onclick="return checkPassword();">Жми здесь, чтобы отправить пароль и посмотреть сайт</a></p> 
+    </div>
+</body>
+</html>
