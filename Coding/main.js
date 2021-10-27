@@ -15,7 +15,7 @@ let xFinal = x2 - x1;
 console.log ('Первая сторона', xFinal);
 let yFinal = y2 - y1;
 console.log ('Вторая сторона', yFinal);
-let sqare = xFinal * yFinal;
+let sqare = Math.abs (xFinal * yFinal);
 console.log ('Площадь равна', sqare);
 
 
@@ -27,7 +27,7 @@ let xrFinal = xr2 - xr1;
 console.log ('Первая сторона', xrFinal);
 let yrFinal = yr2 - yr1;
 console.log ('Вторая сторона', yrFinal);
-let rsqare = xrFinal * yrFinal;
+let rsqare = Math.abs (xrFinal * yrFinal);
 console.log ('Площадь равна', rsqare);
 
 
@@ -39,7 +39,7 @@ let exrFinal = exr2 - exr1;
 console.log ('Первая сторона', exrFinal);
 let eyrFinal = eyr2 - eyr1;
 console.log ('Вторая сторона', eyrFinal);
-let ersqare = exrFinal * eyrFinal;
+let ersqare = Math.abs (exrFinal * eyrFinal);
 console.log ('Площадь равна', ersqare);
 
 
@@ -51,7 +51,7 @@ let rexrFinal = rexr2 - rexr1;
 console.log ('Первая сторона', rexrFinal);
 let reyrFinal = reyr2 - reyr1;
 console.log ('Вторая сторона', reyrFinal);
-let rersqare = rexrFinal * reyrFinal;
+let rersqare = Math.abs (rexrFinal * reyrFinal);
 console.log ('Площадь равна', rersqare);
 
 
@@ -63,5 +63,5 @@ let trexrFinal = trexr2 - trexr1;
 console.log ('Первая сторона', trexrFinal);
 let treyrFinal = treyr2 - treyr1;
 console.log ('Вторая сторона', treyrFinal);
-let trersqare = trexrFinal * treyrFinal;
+let trersqare = Math.abs (trexrFinal * treyrFinal);
 console.log ('Площадь равна', trersqare);
