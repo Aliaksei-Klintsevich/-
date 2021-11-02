@@ -65,3 +65,42 @@ let treyrFinal = treyr2 - treyr1;
 console.log ('Вторая сторона', treyrFinal);
 let trersqare = Math.abs (trexrFinal * treyrFinal);
 console.log ('Площадь равна', trersqare);
+
+let first = 0.1 + 0.2 + 0.033;
+let second = 0.33334;
+let precision = 3;
+
+let firstNormalized = Math.round(
+    second * Math.pow(10, precision)
+);
+let secondNormalized = Math.round(
+    second * Math.pow(10, precision)
+);
+console.log ('Исходные числа равны', first === second);
+console.log ('Числа равны', firstNormalized === secondNormalized);
+console.log ('Первое число больше', firstNormalized > secondNormalized);
+console.log ('Первое число меньше', firstNormalized < secondNormalized);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
