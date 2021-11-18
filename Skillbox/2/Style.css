@@ -1,9 +1,9 @@
 table {
-  border-collapse: collapse;
-  border: solid #000;
   text-align: center;
+  border-collapse: collapse;
 }
 td, th {
+  border: solid #000;
   padding: 5px;
 }
 
