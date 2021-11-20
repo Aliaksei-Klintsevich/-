@@ -17,6 +17,7 @@ td, th {
 .heading {
   color: white;
   margin-bottom: 30px;
+  font-family: 'GraphikLGG', sans-serif;
 }
 .download {
   color: white;
@@ -28,6 +29,12 @@ td, th {
   padding: 20px;
   color: white;
   border: 3px solid white;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @font-face {
   font-family: 'Graphik LCG';
