@@ -1,6 +1,7 @@
 table {
   text-align: center;
   border-collapse: collapse;
+  margin-top: 100px;
 }
 td, th {
   border: solid #000;
@@ -35,6 +36,27 @@ td, th {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.h1 {
+  margin-top: 100px;
+  padding-left: 100px;
+  font-size: 48px;
+  color: #222020;
+}
+.h3 {
+  padding-left: 180px;
+  font-size: 36px;
+  color: #2f1ce4;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+.li {
+  padding-left: 200px;
+  font-size: 18px;
+}
+.p {
+  padding-left: 180px;
+  margin-bottom: 20px;
 }
 @font-face {
   font-family: 'Graphik LCG';
