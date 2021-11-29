@@ -5,26 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base_1</title>
+    <style>
+        .imgleft {
+            background-image: url(../Pictures/icon_file.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            padding: 10px;
+        }
+        .imgword {
+            background-image: url(../Pictures/icon_word.jpeg);
+            background-repeat: no-repeat;
+            background-position: right top 15px;
+            padding: 16px;
+            margin-left: -20px;
+        }
+        .imgpdf {
+            background-image: url(../Pictures/icon_pdf.png);
+            background-repeat: no-repeat;
+            background-position: right top 15px;
+            padding: 16px;
+            margin-left: -20px;
+        }
+        .imgzip {
+            background-image: url(../Pictures/icon_5.gif);
+            background-repeat: no-repeat;
+            background-position: right top 15px;
+            padding: 16px;
+            margin-left: -20px;
+        }
+        li ::before {
+            content: url(../Pictures/icon_list.jpeg);
+        }
+        ul {
+            margin-left: -45px;
+        }
+    </style>
 </head>
 <body>
     <h1>Форматы файлов</h1>
-    <p>.DOC или .doc (от англ. <a href="">document</a>) - расширение имени файла, используемое для файлов,
+    <p>.DOC или .doc (от англ. <a href="" class="imgleft">document</a>) - расширение имени файла, используемое для файлов,
     представляющих текст, с разметкой или без. Расширение .DOC часто использовалось для 
     обозначения простых текстовых файлов без формирования, однако позже стало
     использоваться для двоичных форматов с разметкой.</p>
-    <a href="">Документ MS Word</a>
-    <p>Portable Document Format (<a href="">PDF</a>) - межплатформенный формат электронных документов,
+    <a href="" class="imgword">Документ MS Word</a>
+    <p>Portable Document Format (<a href="" class="imgleft">PDF</a>) - межплатформенный формат электронных документов,
      разработанный фирмой Adobe Systems с использованием ряда возможностей языка
      Postscript.</p>
-     <a href="">Документ PDF</a>
+     <a href="" class="imgpdf">Документ PDF</a>
      <p>ZIP - популярный формат сжатия данных и архивации файлов. Файл в этом формате
-     обычно имеет расширение <a href="">.zip</a> и хранит в сжатом или несжатом виде один или несколько
+     обычно имеет расширение <a href="" class="imgleft">.zip</a> и хранит в сжатом или несжатом виде один или несколько
      файлов, которые можно из него извлечь путем распаковки с помощью специальной
      программы.</p>
-     <a href="">Архив</a>
+     <a href="" class="imgzip">Архив</a>
      <h2>Это список файлов</h2>
-     <p><a href="">Документ MS Word</a></p>
-     <p><a href="">Документ PDF</a></p>
-     <p><a href="">Архив</a></p>
+     <ul>
+     <li><a href="../Pictures/icon_word.jpeg">Документ MS Word</a></li>
+     <li><a href="">Документ PDF</a></li>
+     <li><a href="">Архив</a></li>
+     </ul>
 </body>
 </html>
