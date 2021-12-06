@@ -50,6 +50,10 @@ td, th {
   margin-top: 100px;
   margin-bottom: 25px;
 }
+.href_mod_3 {
+  font-size: 25px;
+  color: #2f1ce4;
+}
 .li {
   padding-left: 200px;
   font-size: 18px;
