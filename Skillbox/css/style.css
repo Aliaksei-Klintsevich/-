@@ -125,34 +125,39 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.card_1 {
-  background-image: url("../img_files/Module_4/photo-1.png");
-  background-size: 300px;
-  background-repeat: no-repeat;
-  padding: 130px;
-  padding-left: 5px;
+.child {
+  display: inline-block;
+  width: 560px;
+  min-height: 300px;
+  border: 1px solid #000;
+  margin-right: 46px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  position: relative;
 }
-.card_2 {
-  background-image: url("../img_files/Module_4/photo-2.png");
-  background-size: 300px;
-  background-repeat: no-repeat;
-  padding: 130px;
-  padding-left: 5px;
+
+.number {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 16px;
 }
-.card_3 {
-  background-image: url("../img_files/Module_4/photo-3.png");
-  background-size: 300px;
-  background-repeat: no-repeat;
-  padding: 130px;
-  padding-left: 5px;
+
+.parent {
+  width: 1170px; /* для примера */
+  margin: 0 auto;
 }
-.card_4 {
-  background-image: url("../img_files/Module_4/photo-4.png");
-  background-size: 300px;
-  background-repeat: no-repeat;
-  padding: 130px;
-  padding-left: 5px;
+
+.right {
+  margin-right: 0;
 }
-.ul {
-  display: inline-table;
+
+.btn-center {
+  text-align: center;
+}
+.list { 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
 }
