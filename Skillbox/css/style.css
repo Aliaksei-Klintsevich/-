@@ -128,7 +128,7 @@ a {
 .child_1 {
   display: inline-block;
   width: 480px;
-  min-height: 500px;
+  min-height: 505px;
   border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
@@ -142,7 +142,7 @@ a {
 .child_2 {
   display: inline-block;
   width: 480px;
-  min-height: 500px;
+  min-height: 505px;
   border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
@@ -156,7 +156,7 @@ a {
 .child_3 {
   display: inline-block;
   width: 480px;
-  min-height: 500px;
+  min-height: 505px;
   border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
@@ -170,7 +170,7 @@ a {
 .child_4 {
   display: inline-block;
   width: 480px;
-  min-height: 500px;
+  min-height: 505px;
   border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
@@ -189,20 +189,57 @@ a {
 }
 
 .parent {
-  width: 1170px; /* для примера */
+  width: 1020px; /* для примера */
   margin: 0 auto;
 }
 
 .right {
   margin-right: 0;
 }
-
-.btn-center {
-  text-align: center;
-}
 .list { 
   padding: 0;
   margin: 0;
   list-style: none;
   font-size: 10;
+  margin-left: 79px;
+  width: 1020px;
+}
+.wave {
+  background-image: url(../img_files/Module_4/Волна_низ.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-bottom: 1000px;
+}
+.button {
+  padding: 30px;
+  background-color: white;
+  color: #2f1ce4;
+  width: 280px;
+  height: 80px;
+  margin-left: 449px;
+  border: #2f1ce4 solid 4px;
+  text-align: center;
+}
+.widthmaket {
+  width: 1170px;
+  height: 2360px;
+  margin: 0 auto;
+  padding-top: 58px;
+  margin-left: 371px;
+}
+.returnmaket{
+  background-image: url("../img_files/return.png");
+  background-position: left center;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  padding: 60px;
+  font-size: 18px;
+  padding-left: 40px;
+  font-family: 'Gilroy';
+}
+.headingmaket{
+  font-size: 38px;
+  margin-left: 102px;
+  font-weight: 800;
+  margin-bottom: 85px;
 }
