@@ -129,7 +129,6 @@ a {
   display: inline-block;
   width: 480px;
   min-height: 505px;
-  border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
   vertical-align: middle;
@@ -138,12 +137,12 @@ a {
   background-repeat: no-repeat;
   padding-top: 200px;
   padding-left: 50px;
+  box-shadow: 0 0 15px rgba(122,122,122,0.5);
 }
 .child_2 {
   display: inline-block;
   width: 480px;
   min-height: 505px;
-  border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
   vertical-align: middle;
@@ -152,12 +151,12 @@ a {
   background-repeat: no-repeat;
   padding-top: 200px;
   padding-left: 50px;
+  box-shadow: 0 0 15px rgba(122,122,122,0.5);
 }
 .child_3 {
   display: inline-block;
   width: 480px;
   min-height: 505px;
-  border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
   vertical-align: middle;
@@ -166,12 +165,12 @@ a {
   background-repeat: no-repeat;
   padding-top: 200px;
   padding-left: 50px;
+  box-shadow: 0 0 15px rgba(122,122,122,0.5);
 }
 .child_4 {
   display: inline-block;
   width: 480px;
   min-height: 505px;
-  border: 1px solid #000;
   margin-right: 46px;
   margin-bottom: 20px;
   vertical-align: middle;
@@ -180,12 +179,14 @@ a {
   background-repeat: no-repeat;
   padding-top: 200px;
   padding-left: 50px;
+  box-shadow: 0 0 15px rgba(122,122,122,0.5);
 }
 .number {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  font-size: 16px;
+  font-size: 36px;
+  opacity: .1;
 }
 
 .parent {
@@ -242,4 +243,16 @@ a {
   margin-left: 102px;
   font-weight: 800;
   margin-bottom: 85px;
+}
+.titlecard {
+  font-size: 31px;
+  font-weight: 800;
+  color: #2f1ce4;
+  padding-bottom: 10px;
+}
+.list-line-height {
+  line-height: 30px;
+}
+.boxshadow {
+  box-shadow: 0 0 5px;
 }
