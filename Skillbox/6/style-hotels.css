@@ -5,6 +5,8 @@
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 a {
     text-decoration: none;
@@ -36,4 +38,17 @@ html {
 }
 .nav-item:not(:last-child) {
     margin-right: 50px;
+}
+.header-btn {
+    margin-left: 80px;
+}
+.btn {
+    background-color: #3172b9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    padding: 15px 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
