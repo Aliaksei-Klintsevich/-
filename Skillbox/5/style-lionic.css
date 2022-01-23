@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+html {
+    font-family: sans-serif;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo {
+    margin-right: auto;
+}
+.nav-list {
+    display: flex;
+}
+.header {
+    height: 110px;
+}
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
