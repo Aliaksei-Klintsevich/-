@@ -43,6 +43,7 @@ html {
     margin-left: 80px;
 }
 .btn {
+    display: inline-block;
     background-color: #3172b9;
     color: white;
     text-transform: uppercase;
@@ -51,4 +52,41 @@ html {
     padding: 15px 16px;
     border-radius: 4px;
     cursor: pointer;
+}
+.hero-container {
+    padding-top: 120px;
+    padding-bottom: 130px;
+}
+.hero-content {
+    max-width: 50%;
+}
+.section-hero-heading {
+    margin-bottom: 20px;
+}
+.section-hero-description {
+    margin-bottom: 30px;
+}
+.section-hero-btn-description {
+    margin-top: 10px;
+}
+.section-do {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+.section-description {
+    margin-top: 25px;
+}
+.section-do-list {
+    margin-top: 50px;
+    display: flex;
+}
+.text-center {
+    text-align: center;
+}
+.section-do-item {
+    flex: 1 1 25%;
+    outline: 3px solid red;
+}
+.section-do-item:not(:last-child) {
+    margin-right:30px;
 }
