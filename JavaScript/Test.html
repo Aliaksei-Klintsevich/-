@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var loanAmount = prompt ('Введите сумму договора');
+        while ( true ) {
+        var checkLoan = parseInt (loanAmount);
+        if (!isNaN (checkLoan))
+            break; // введено корректное число - выходим из цикла
+        loanAmount = prompt ('Введите корректное число!');
+    }
+        var interestRate = prompt ('Введите процентную ставку');
+        while ( true ) {
+        var checkRate = parseInt (interestRate);
+        if (!isNaN (checkRate))
+            break; // введено корректное число - выходим из цикла
+        interestRate = prompt ('Введите корректное число!');
+    }
+        var term = prompt ('Введите количество месяцев');
+        while ( true ) {
+        var checkTerm = parseInt (term);
+        if (!isNaN (checkTerm))
+            break; // введено корректное число - выходим из цикла
+        term = prompt ('Введите корректное число!');
+    }
+        var principalDebt = parseFloat (loanAmount) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (loanAmount) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+
+        alert (monthlyPayment + ' ' + calculation);
+    </script>
+</body>
+</html>
