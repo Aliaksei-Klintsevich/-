@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+<input type='button' value='Расчет емесячного платежа' onclick='hello( )'>
+<br>
+<br>
+<br>
+<br>
+<input type='button' value='Коэффициент кредитоспособности' onclick='goodBye( )'>
+    <script>
+	function hello( ) {
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var loanAmount = prompt ('Введите сумму договора');
+        while ( true ) {
+        var checkLoan = parseInt (loanAmount);
+        if (!isNaN (checkLoan))
+            break; // введено корректное число - выходим из цикла
+        loanAmount = prompt ('Введите корректное число!');
+    }
+        var interestRate = prompt ('Введите процентную ставку');
+        while ( true ) {
+        var checkRate = parseInt (interestRate);
+        if (!isNaN (checkRate))
+            break; // введено корректное число - выходим из цикла
+        interestRate = prompt ('Введите корректное число!');
+    }
+        var term = prompt ('Введите количество месяцев');
+        while ( true ) {
+        var checkTerm = parseInt (term);
+        if (!isNaN (checkTerm))
+            break; // введено корректное число - выходим из цикла
+        term = prompt ('Введите корректное число!');
+    }
+        var principalDebt = parseFloat (loanAmount) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (loanAmount) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+        alert (monthlyPayment + ' ' + calculation);
+	}
+    </script>
+    <script>
+	function goodBye( ) {
+        var monthlyPayment = 'Коэффициент кредитоспособности:';
+        var loanAmount = prompt ('Введите сумму договора');
+        while ( true ) {
+        var checkLoan = parseInt (loanAmount);
+        if (!isNaN (checkLoan))
+            break; // введено корректное число - выходим из цикла
+        loanAmount = prompt ('Введите корректное число!');
+    }
+        var interestRate = prompt ('Введите процентную ставку');
+        while ( true ) {
+        var checkRate = parseInt (interestRate);
+        if (!isNaN (checkRate))
+            break; // введено корректное число - выходим из цикла
+        interestRate = prompt ('Введите корректное число!');
+    }
+        var term = prompt ('Введите количество месяцев');
+        while ( true ) {
+        var checkTerm = parseInt (term);
+        if (!isNaN (checkTerm))
+            break; // введено корректное число - выходим из цикла
+        term = prompt ('Введите корректное число!');
+    }
+        var rashody = prompt ('Введите расходы');
+        while ( true ) {
+        var checkRashody = parseInt (rashody);
+        if (!isNaN (checkRashody))
+            break; // введено корректное число - выходим из цикла
+        rashody = prompt ('Введите корректное число!');
+    }
+        var dkh = prompt ('Введите расходы по ДКХ');
+        while ( true ) {
+        var checkDkh = parseInt (dkh);
+        if (!isNaN (checkDkh))
+            break; // введено корректное число - выходим из цикла
+        dkh = prompt ('Введите корректное число!');
+    }
+        var dohod = prompt ('Введите доход Заявителя');
+        while ( true ) {
+        var checkDohod = parseInt (dohod);
+        if (!isNaN (checkDohod))
+            break; // введено корректное число - выходим из цикла
+        dohod = prompt ('Введите корректное число!');
+    }
+        var principalDebt = parseFloat (loanAmount) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (loanAmount) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+	var allRashody = parseFloat (dkh) + parseFloat (rashody);
+	var koeff = (allRashody + calculation) / dohod;
+        alert(monthlyPayment + ' ' + koeff);
+	}
+    </script>
+</body>
+</html>
