@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fafafa;
+}
+.container{
+    padding: 0 16px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #ffff;
+    border-bottom: 1px solid #c4c4c4;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__icons{
+    margin: 0 -15px;
+}
+.header-icon{
+    margin: 0 15px;
+}
