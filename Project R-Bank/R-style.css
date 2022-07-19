@@ -1,0 +1,14 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+.term {
+    font-weight: bold;
+    font-size: 16px;
+}
+p, li {
+	font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ h1, h2 {
+    text-align: center;
+ }
