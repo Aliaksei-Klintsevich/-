@@ -12,3 +12,10 @@ p, li {
  h1, h2 {
     text-align: center;
  }
+ .table-style {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+ }
