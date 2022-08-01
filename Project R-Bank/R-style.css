@@ -2,7 +2,7 @@ p, ul {
     margin: 0;
 }
 .term {
-    font-weight: bold; /*Терминология*/
+    font-weight: bold;   /*Терминология*/
     font-size: 16px;
 }
 p, li, table {
@@ -12,8 +12,7 @@ p, li, table {
     text-align: center;
  }
  .table-style { 
-    border-collapse: collapse; /*Таблица*/
-    width: 50%;
+    border-collapse: collapse;   /*Таблица*/
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -22,5 +21,13 @@ p, li, table {
     font-style: italic;
  }
  .text-underline {
-    text-decoration: underline; /*Подчеркнутый текст*/
+    text-decoration: underline;   /*Подчеркнутый текст*/
+ }
+ .app-table {
+   text-align: right;
+   margin-top: 150px;
+ }
+ .table-header {
+   font-weight: bold;   /*Заголовок таблицы*/
+   margin-bottom: 30px;
  }
