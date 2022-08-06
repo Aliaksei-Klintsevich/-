@@ -18,6 +18,13 @@ p, li, table {
     margin-bottom: 50px;
     width: 50%;
  }
+ .table-style-app { 
+   border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
+   margin: 0 auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   font-size: 14px;
+}
  .text-i {
     font-style: italic;
  }
@@ -31,4 +38,5 @@ p, li, table {
  .table-header {
    font-weight: bold;   /*Заголовок таблицы*/
    margin-bottom: 30px;
+   font-size: 18px;
  }
