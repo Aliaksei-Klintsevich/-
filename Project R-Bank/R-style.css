@@ -1,6 +1,32 @@
 p, ul {
     margin: 0;
 }
+a {
+   cursor: pointer;
+   color: white;
+   font-size: 18px;
+   text-decoration: none;
+}
+.header-list {
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+}
+.header {
+   background-color: brown;
+   color: white;
+   padding: 15px;
+}
+.header-heading {
+   font-size: 42px;
+   color: white;
+   background-color: blue;
+   text-align: center;
+   padding: 20px;
+   font-family: 'Caveat', cursive;
+
+
+}
 .term {
     font-weight: bold;   /*Терминология*/
     font-size: 16px;
