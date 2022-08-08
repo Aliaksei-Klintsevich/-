@@ -23,9 +23,7 @@ a {
    background-color: blue;
    text-align: center;
    padding: 20px;
-   font-family: 'Caveat', cursive;
-
-
+   font-family: sans-serif;
 }
 .term {
     font-weight: bold;   /*Терминология*/
