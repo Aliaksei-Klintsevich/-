@@ -1,9 +1,12 @@
+body {
+   background-color: #fafafa;
+   margin: 0;
+}
 p, ul {
     margin: 0;
 }
 a {
    cursor: pointer;
-   color: white;
    font-size: 18px;
    text-decoration: none;
 }
@@ -13,17 +16,12 @@ a {
    list-style: none;
 }
 .header {
-   background-color: brown;
-   color: white;
-   padding: 15px;
+   background-color: #ffff;
+   padding: 35px;
+   border-bottom: solid 1px #c4c4c4;
 }
-.header-heading {
-   font-size: 42px;
-   color: white;
-   background-color: blue;
-   text-align: center;
-   padding: 20px;
-   font-family: sans-serif;
+.main-li {
+   margin-bottom: 10px;
 }
 .term {
     font-weight: bold;   /*Терминология*/
