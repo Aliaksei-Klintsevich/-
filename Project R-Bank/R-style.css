@@ -20,6 +20,25 @@ a {
    padding: 35px;
    border-bottom: solid 1px #c4c4c4;
 }
+.logo {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+.logo-text-top {
+   font-size: 97px;
+   font-family: fantasy;
+   color: #00008B;
+   margin-top: 20px;
+}
+.logo-text-bottom {
+   font-size: 97px;
+   font-family: fantasy;
+   color: #8B0000;
+}
+.logo-svg-color {
+   fill: #00008B;
+}
 .main-li {
    margin-bottom: 10px;
 }
