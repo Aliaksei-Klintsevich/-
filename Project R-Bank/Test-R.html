@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Test-R</title>
     <style>
-        body {
+      body {
     background-color: #fafafa;
     margin: 0;
  }
@@ -28,9 +28,18 @@
     padding: 35px;
     border-bottom: solid 1px #c4c4c4;
  }
+ .header-text-page-1 {
+   font-weight: bold;
+   color: #00008B;
+ }
+ .header-text-page-2 {
+   font-weight: bold;
+   color: #8B0000;
+ }
  .logo {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
  }
  .logo-text-top {
     font-size: 97px;
@@ -93,20 +102,20 @@
 
 
   .bg {
-    background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
-    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
+    background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+    background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
     background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-	min-height: calc(100vh - 2rem);
+    -webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: space-evenly;
 	overflow: hidden;
-	position: relative; 
+	position: relative;
+   height: 700px; 
 }
 
 div.bg::before, 
@@ -205,8 +214,8 @@ div.bg::after {
 <body>
    <header class="header">
       <ul class="header-list">
-         <li><a href="https://rbank.by/" target="_blank">Официальный сайт ЗАО «Банк «Решение»</a></li>
-         <li><a href="https://intranet.infobank.by/" target="_blank">Корпоративный портал ЗАО «Банк «Решение»</a></li>
+         <li><a href="https://rbank.by/" target="_blank">Официальный сайт <span style="font-weight:bold">ЗАО</span> «<span class="header-text-page-1">Банк</span> «<span class="header-text-page-2">Решение</span>»</a></li>
+         <li><a href="https://intranet.infobank.by/" target="_blank">Корпоративный портал <span style="font-weight:bold">ЗАО</span> «<span class="header-text-page-1">Банк</span> «<span class="header-text-page-2">Решение</span>»</a></li>
          <li>г.Минск, ул.Сторожевская, 8</li>
       </ul>
    </header>
