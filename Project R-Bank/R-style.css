@@ -89,6 +89,26 @@ p, li, table {
    margin-bottom: 30px;
    font-size: 18px;
  }
+ .footer-td {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+ }
+ .footer-main {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFFFFF;
+ }
+ .footer-list {
+  list-style: none;
+  text-align: center;
+  color: #FFFFFF;
+ }
+ .footer-box {
+  width: 33%;
+ }
  
 
 
@@ -135,6 +155,50 @@ div.bg::after {
    bottom: 0;
    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
    transform-origin: 10% 10%; 
+}
+
+.bg-footer {
+  background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
+  background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+  background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+ -moz-animation: Gradient 10s ease infinite;
+ animation: Gradient 10s ease infinite;
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ justify-content: space-evenly;
+ overflow: hidden;
+ position: relative;
+ height: 400px; 
+}
+
+div.bg-footer::before, 
+div.bg-footer::after {
+ content: "";
+ width: 70vmax;
+ height: 70vmax;
+ position: absolute;
+ background: rgba(255, 255, 255, 0.07);
+ left: -20vmin;
+ top: -20vmin;
+ animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+ z-index: 1;
+ will-change: border-radius, transform;
+ transform-origin: 30% 30%;
+ pointer-events: none; 
+}
+ 
+div.bg-footer::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  transform-origin: 10% 10%; 
 }
 
 @-webkit-keyframes Gradient {

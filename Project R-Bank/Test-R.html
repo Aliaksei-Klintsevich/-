@@ -7,208 +7,272 @@
     <title>Test-R</title>
     <style>
       body {
-    background-color: #fafafa;
+   background-color: #fafafa;
+   margin: 0;
+}
+p, ul {
     margin: 0;
- }
- p, ul {
-     margin: 0;
- }
- a {
-    cursor: pointer;
-    font-size: 18px;
-    text-decoration: none;
- }
- .header-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
- }
- .header {
-    background-color: #ffff;
-    padding: 35px;
-    border-bottom: solid 1px #c4c4c4;
- }
- .header-text-page-1 {
-   font-weight: bold;
+}
+a {
+   cursor: pointer;
+   font-size: 18px;
+   text-decoration: none;
+}
+.header-list {
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+}
+.header {
+   background-color: #ffff;
+   padding: 35px;
+   border-bottom: solid 1px #c4c4c4;
+}
+.header-text-page-1 {
+  font-weight: bold;
+  color: #00008B;
+}
+.header-text-page-2 {
+  font-weight: bold;
+  color: #8B0000;
+}
+.logo {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+}
+.logo-text-top {
+   font-size: 97px;
+   font-family: fantasy;
    color: #00008B;
- }
- .header-text-page-2 {
-   font-weight: bold;
+   margin-top: 20px;
+}
+.logo-text-bottom {
+   font-size: 97px;
+   font-family: fantasy;
    color: #8B0000;
+}
+.logo-svg-color {
+   fill: #00008B;
+}
+.main-li {
+   margin-bottom: 10px;
+}
+.term {
+    font-weight: bold;   /*Терминология*/
+    font-size: 16px;
+}
+p, li, table {
+    font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
  }
- .logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+ h1, h2 {
+    text-align: center;
  }
- .logo-text-top {
-    font-size: 97px;
-    font-family: fantasy;
-    color: #00008B;
-    margin-top: 20px;
- }
- .logo-text-bottom {
-    font-size: 97px;
-    font-family: fantasy;
-    color: #8B0000;
- }
- .logo-svg-color {
-    fill: #00008B;
- }
- .main-li {
-    margin-bottom: 10px;
- }
- .term {
-     font-weight: bold;   /*Терминология*/
-     font-size: 16px;
- }
- p, li, table {
-     font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  h1, h2 {
-     text-align: center;
-  }
-  .table-style { 
-     border-collapse: collapse;   /*Таблица*/
-     margin: 0 auto;
-     margin-top: 50px;
-     margin-bottom: 50px;
-     width: 50%;
-  }
-  .table-style-app { 
-    border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
+ .table-style { 
+    border-collapse: collapse;   /*Таблица*/
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 14px;
+    width: 50%;
  }
-  .text-i {
-     font-style: italic;
-  }
-  .text-underline {
-     text-decoration: underline;   /*Подчеркнутый текст*/
-  }
-  .app-table {
-    text-align: right;
-    margin-top: 150px;
-  }
-  .table-header {
-    font-weight: bold;   /*Заголовок таблицы*/
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-  
+ .table-style-app { 
+   border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
+   margin: 0 auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   font-size: 14px;
+}
+ .text-i {
+    font-style: italic;
+ }
+ .text-underline {
+    text-decoration: underline;   /*Подчеркнутый текст*/
+ }
+ .app-table {
+   text-align: right;
+   margin-top: 150px;
+ }
+ .table-header {
+   font-weight: bold;   /*Заголовок таблицы*/
+   margin-bottom: 30px;
+   font-size: 18px;
+ }
+ .footer-td {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+ }
+ .footer-main {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFFFFF;
+ }
+ .footer-list {
+  list-style: none;
+  text-align: center;
+  color: #FFFFFF;
+ }
+ .footer-box {
+  width: 33%;
+ }
+ 
 
 
 
-  .bg {
-    background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
-    background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
-    background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 10s ease infinite;
-	-moz-animation: Gradient 10s ease infinite;
-	animation: Gradient 10s ease infinite;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	justify-content: space-evenly;
-	overflow: hidden;
-	position: relative;
-   height: 700px; 
+ .bg {
+   background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
+   background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+   background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+   background-size: 400% 400%;
+   -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+  height: 700px; 
 }
 
 div.bg::before, 
 div.bg::after {
-	content: "";
-	width: 70vmax;
-	height: 70vmax;
-	position: absolute;
-	background: rgba(255, 255, 255, 0.07);
-	left: -20vmin;
-	top: -20vmin;
-	animation: morph 15s linear infinite alternate, spin 20s linear infinite;
-	z-index: 1;
-	will-change: border-radius, transform;
-	transform-origin: 30% 30%;
-	pointer-events: none; 
+  content: "";
+  width: 70vmax;
+  height: 70vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.07);
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 30% 30%;
+  pointer-events: none; 
 }
-	
+  
 div.bg::after {
-    width: 70vmin;
-    height: 70vmin;
-    left: auto;
-    right: -10vmin;
-    top: auto;
-    bottom: 0;
-    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
-    transform-origin: 10% 10%; 
+   width: 70vmin;
+   height: 70vmin;
+   left: auto;
+   right: -10vmin;
+   top: auto;
+   bottom: 0;
+   animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+   transform-origin: 10% 10%; 
+}
+
+.bg-footer {
+  background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
+  background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+  background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+ -moz-animation: Gradient 10s ease infinite;
+ animation: Gradient 10s ease infinite;
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ justify-content: space-evenly;
+ overflow: hidden;
+ position: relative;
+ height: 400px; 
+}
+
+div.bg-footer::before, 
+div.bg-footer::after {
+ content: "";
+ width: 70vmax;
+ height: 70vmax;
+ position: absolute;
+ background: rgba(255, 255, 255, 0.07);
+ left: -20vmin;
+ top: -20vmin;
+ animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+ z-index: 1;
+ will-change: border-radius, transform;
+ transform-origin: 30% 30%;
+ pointer-events: none; 
+}
+ 
+div.bg-footer::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  transform-origin: 10% 10%; 
 }
 
 @-webkit-keyframes Gradient {
-	0% {
-		background-position: 0 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0 50%
-	}
+  0% {
+     background-position: 0 50%
+  }
+  50% {
+     background-position: 100% 50%
+  }
+  100% {
+     background-position: 0 50%
+  }
 }
 
 @-moz-keyframes Gradient {
-	0% {
-		background-position: 0 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0 50%
-	}
+  0% {
+     background-position: 0 50%
+  }
+  50% {
+     background-position: 100% 50%
+  }
+  100% {
+     background-position: 0 50%
+  }
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0 50%
-	}
+  0% {
+     background-position: 0 50%
+  }
+  50% {
+     background-position: 100% 50%
+  }
+  100% {
+     background-position: 0 50%
+  }
 }
 
 @keyframes morph {
-  0% {
-    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
-  100% {
-    border-radius: 40% 60%; } 
+ 0% {
+   border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+ 100% {
+   border-radius: 40% 60%; } 
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(1turn); 
-  } 
+ to {
+   transform: rotate(1turn); 
+ } 
 }
-	.st0{display:none;}
-	.st1{display:inline;}
-	.st2{opacity:0.29;}
-	.st3{fill:#FFFFFF;}
-	.st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-	.st5{clip-path:url(#SVGID_4_);}
-	.st6{clip-path:url(#SVGID_6_);}
-	.st7{clip-path:url(#SVGID_8_);}
-	.st8{clip-path:url(#SVGID_10_);}
-	.st9{fill:none;}
-	.st10{clip-path:url(#SVGID_12_);}
-	.st11{opacity:0.7;}
-	.st12{clip-path:url(#SVGID_14_);}
-	.st13{opacity:0.2;}
-	.st14{clip-path:url(#SVGID_16_);}
-	.st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+  .st0{display:none;}
+  .st1{display:inline;}
+  .st2{opacity:0.29;}
+  .st3{fill:#FFFFFF;}
+  .st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+  .st5{clip-path:url(#SVGID_4_);}
+  .st6{clip-path:url(#SVGID_6_);}
+  .st7{clip-path:url(#SVGID_8_);}
+  .st8{clip-path:url(#SVGID_10_);}
+  .st9{fill:none;}
+  .st10{clip-path:url(#SVGID_12_);}
+  .st11{opacity:0.7;}
+  .st12{clip-path:url(#SVGID_14_);}
+  .st13{opacity:0.2;}
+  .st14{clip-path:url(#SVGID_16_);}
+  .st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
     </style>
 </head>
 <body>
