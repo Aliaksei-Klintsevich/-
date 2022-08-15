@@ -109,7 +109,18 @@ body {
   .footer-box {
    width: 33%;
   }
-  
+ .footer-list-a {
+   color: #FFFFFF;
+ }
+ .autor {
+   color: #FFFFFF;
+   text-align: center;
+   background: black;
+   margin-top: 70px;
+   font-weight: bold;
+   font-family: sans-serif;
+   padding: 3px;
+ }
 
 
 
@@ -171,7 +182,7 @@ div.bg::after {
   justify-content: space-evenly;
   overflow: hidden;
   position: relative;
-  height: 400px; 
+  height: 430px; 
 }
 
 div.bg-footer::before, 
