@@ -121,13 +121,16 @@
    color: #FFFFFF;
  }
  .autor {
-   color: #FFFFFF;
-   text-align: center;
-   background: black;
-   margin-top: 70px;
+   margin-top: 450px;
+   margin-left: 800px;
+   position: absolute;
+   z-index: 1;
    font-weight: bold;
    font-family: sans-serif;
    padding: 3px;
+ }
+ a.footer-list-a:hover {
+   color: #005f8b;
  }
 
 
@@ -190,7 +193,7 @@ div.bg::after {
   justify-content: space-evenly;
   overflow: hidden;
   position: relative;
-  height: 430px; 
+  height: 470px; 
 }
 
 div.bg-footer::before, 
@@ -284,6 +287,52 @@ div.bg-footer::after {
 	.st13{opacity:0.2;}
 	.st14{clip-path:url(#SVGID_16_);}
 	.st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+
+
+
+   .footer-waves {
+      position:relative;
+      text-align:center;
+      background: linear-gradient(60deg, rgba(84,58,183,1) 0%);
+      color:white;
+    }
+    .waves {
+      position:relative;
+      width: 100%;
+      height:15vh;
+      margin-bottom:-7px; /*Fix for safari gap*/
+      min-height:100px;
+      max-height:150px;
+    }
+    /* Animation */
+    
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    }
+    .parallax > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+    .parallax > use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+    @keyframes move-forever {
+      0% {
+       transform: translate3d(-90px,0,0);
+      }
+      100% { 
+        transform: translate3d(85px,0,0);
+      }
+    }
     </style>
 </head>
 <body>
@@ -2518,7 +2567,8 @@ div.bg-footer::after {
          </td>
       </tr>
    </table>
-   <footer class="bg-footer">
+   <footer>
+      <div class="bg-footer">
       <div class="footer-td">
    <div class="footer-box">
       <p class="footer-main">Национальный банк Республики Беларусь</p>
@@ -2534,6 +2584,9 @@ div.bg-footer::after {
          </li>
          <li>
             <a href="https://www.nbrb.by/today/creditregistry" target="_blank" class="footer-list-a">О скоринговой оценке кредитных историй</a>
+         </li>
+         <li>
+            <a href="https://www.nbrb.by/statistics/rates/ratesdaily.asp" target="_blank" class="footer-list-a">Курсы валют</a>
          </li>
       </ul>
    </div>
@@ -2579,6 +2632,9 @@ div.bg-footer::after {
          <li>
             <a href="https://minfin.gov.by/upload/depcen/acts/zakon_070521_99z.pdf" target="_blank" class="footer-list-a">О защите персональных данных (Закон РБ №99-3 от 07.05.2021)</a>
          </li>
+         <li>
+            <a href="https://pravo.by/document/?guid=3871&p0=P32100107" target="_blank" class="footer-list-a">О биометрических документах (Указ №107 от 16.03.2021)</a>
+         </li>
       </ul>
    </div>
    <div class="footer-box">
@@ -2599,6 +2655,22 @@ div.bg-footer::after {
    </div>
    </div>
    <p class="autor">BY ALIAKSEI KLINTSEVICH, 2022</p>
-   </footer>
+   <div class="footer-waves">
+      <div>
+      <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+      </svg>
+      </div>
+      </div>
+      </div>
+    </footer>
 </body>
 </html>
