@@ -68,6 +68,9 @@
   h1, h2 {
      text-align: center;
   }
+  .main-h {
+    margin-top: 100px;
+  }
   .table-style { 
      border-collapse: collapse;   /*Таблица*/
      margin: 0 auto;
@@ -132,6 +135,33 @@
  a.footer-list-a:hover {
    color: #005f8b;
  }
+.btn-item {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-item li {
+  padding: 15px;
+  background-color: #00008B;
+  color: #FFFFFF;
+  width: 240px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+.btn-item li:hover {
+  background-color: #8B0000;
+}
+.btn-item li a:link {
+  text-decoration: none;
+}
+
+
+.btn-item > li { 
+  transition: transform 0.5s 
+}
+.btn-item > li:hover { 
+  transform: scale(1.2); 
+}
 
 
 
@@ -368,7 +398,20 @@ div.bg-footer::after {
       </div>
 </div>
 </div>
-    <h1>
+<div class="btn">
+   <ul class="btn-item">
+      <li>
+         <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
+      </li>
+      <li>
+         <a>Расчет ежемесячного платежа</a>
+      </li>
+      <li>
+         <a>Расчет коэффициента кредитоспособности</a>
+      </li>
+   </ul>
+</div>
+    <h1 class="main-h">
       ПОЛОЖЕНИЕ О КОНТРОЛЕ РИСКОВ РОЗНИЧНОГО КРЕДИТОВАНИЯ В ЗАО «БАНК «РЕШЕНИЕ»
    </h1>
     <h3>
