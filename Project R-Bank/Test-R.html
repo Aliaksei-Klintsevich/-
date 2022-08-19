@@ -154,21 +154,40 @@
 .btn-item li a:link {
   text-decoration: none;
 }
-
-
 .btn-item > li { 
   transition: transform 0.5s 
 }
 .btn-item > li:hover { 
   transform: scale(1.2); 
 }
-
-
+.btn-item li a {
+  color: #FFFFFF;
+}
+.maxAmout:hover {
+  color: #00008B;
+}
+.fix {
+  color: #FFFFFF;
+	text-align:center;
+	position:fixed;
+	right:10px;
+  border: 2px solid black;
+  bottom: 10px;
+}
+.fix:hover {
+  background-color: #00008B;
+}
+.fix-href:hover {
+  color: #FFFFFF;
+}
+.fix-href {
+  font-size: 40px;
+}
 
   .bg {
-    background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
-    background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
-    background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+    background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 29%, #00008B 66%, #8B0000 100%);
+    background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
+    background: linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
     background-size: 400% 400%;
     -webkit-animation: Gradient 10s ease infinite;
 	-moz-animation: Gradient 10s ease infinite;
@@ -223,7 +242,7 @@ div.bg::after {
   justify-content: space-evenly;
   overflow: hidden;
   position: relative;
-  height: 470px; 
+  height: 480px; 
 }
 
 div.bg-footer::before, 
@@ -404,13 +423,105 @@ div.bg-footer::after {
          <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
       </li>
       <li>
-         <a>Расчет ежемесячного платежа</a>
+         <a href='javascript:credit( )'>Расчет ежемесячного платежа</a>
       </li>
       <li>
-         <a>Расчет коэффициента кредитоспособности</a>
+         <a href='javascript:ratio( )'>Расчет коэффициента кредитоспособности</a>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет максимальной суммы кредита
+            </summary><br>
+            <a href='javascript:maxAmout( )' class="maxAmout">Под коэффициент 0,4</a><br><br>
+            <a href='javascript:maxAmout( )' class="maxAmout">Под коэффициент 0,6</a>
+         </details>
       </li>
    </ul>
 </div>
+<script>
+   function credit( ) {
+            var monthlyPayment = 'Ежемесячный платеж:';
+            var loanAmount = prompt ('Введите сумму договора');
+            while ( true ) {
+            var checkLoan = parseInt (loanAmount);
+            if (!isNaN (checkLoan))
+                break; // введено корректное число - выходим из цикла
+            loanAmount = prompt ('Введите корректное число!');
+        }
+            var interestRate = prompt ('Введите процентную ставку');
+            while ( true ) {
+            var checkRate = parseInt (interestRate);
+            if (!isNaN (checkRate))
+                break; // введено корректное число - выходим из цикла
+            interestRate = prompt ('Введите корректное число!');
+        }
+            var term = prompt ('Введите количество месяцев');
+            while ( true ) {
+            var checkTerm = parseInt (term);
+            if (!isNaN (checkTerm))
+                break; // введено корректное число - выходим из цикла
+            term = prompt ('Введите корректное число!');
+        }
+            var principalDebt = parseFloat (loanAmount) / parseFloat (term); // Расчет суммы основного долга
+            var percentages = parseFloat (loanAmount) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+            var calculation = principalDebt + percentages; //Основной долг + проценты
+            alert (monthlyPayment + ' ' + calculation);
+        }
+</script>
+<script>
+   function ratio( ) {
+            var monthlyPayment = 'Коэффициент кредитоспособности:';
+            var loanAmount = prompt ('Введите сумму договора');
+            while ( true ) {
+            var checkLoan = parseInt (loanAmount);
+            if (!isNaN (checkLoan))
+                break; // введено корректное число - выходим из цикла
+            loanAmount = prompt ('Введите корректное число!');
+        }
+            var interestRate = prompt ('Введите процентную ставку');
+            while ( true ) {
+            var checkRate = parseInt (interestRate);
+            if (!isNaN (checkRate))
+                break; // введено корректное число - выходим из цикла
+            interestRate = prompt ('Введите корректное число!');
+        }
+            var term = prompt ('Введите количество месяцев');
+            while ( true ) {
+            var checkTerm = parseInt (term);
+            if (!isNaN (checkTerm))
+                break; // введено корректное число - выходим из цикла
+            term = prompt ('Введите корректное число!');
+        }
+            var rashody = prompt ('Введите расходы');
+            while ( true ) {
+            var checkRashody = parseInt (rashody);
+            if (!isNaN (checkRashody))
+                break; // введено корректное число - выходим из цикла
+            rashody = prompt ('Введите корректное число!');
+        }
+            var dkh = prompt ('Введите расходы по ДКХ');
+            while ( true ) {
+            var checkDkh = parseInt (dkh);
+            if (!isNaN (checkDkh))
+                break; // введено корректное число - выходим из цикла
+            dkh = prompt ('Введите корректное число!');
+        }
+            var dohod = prompt ('Введите доход Заявителя');
+            while ( true ) {
+            var checkDohod = parseInt (dohod);
+            if (!isNaN (checkDohod))
+                break; // введено корректное число - выходим из цикла
+            dohod = prompt ('Введите корректное число!');
+        }
+            var principalDebt = parseFloat (loanAmount) / parseFloat (term); // Расчет суммы основного долга
+            var percentages = parseFloat (loanAmount) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+            var calculation = principalDebt + percentages; //Основной долг + проценты
+        var allRashody = parseFloat (dkh) + parseFloat (rashody);
+        var koeff = (allRashody + calculation) / dohod;
+            alert(monthlyPayment + ' ' + koeff);
+        }
+</script>
     <h1 class="main-h">
       ПОЛОЖЕНИЕ О КОНТРОЛЕ РИСКОВ РОЗНИЧНОГО КРЕДИТОВАНИЯ В ЗАО «БАНК «РЕШЕНИЕ»
    </h1>
@@ -2610,6 +2721,9 @@ div.bg-footer::after {
          </td>
       </tr>
    </table>
+   <div class="fix">
+      <a href="" class="fix-href">&#8679;</a>
+   </div>
    <footer>
       <div class="bg-footer">
       <div class="footer-td">
@@ -2689,10 +2803,13 @@ div.bg-footer::after {
       </ul>
    </div>
    <div class="footer-box">
-      <p class="footer-main">Комитет государственной безопасности Республики Беларусь</p>
+      <p class="footer-main">Комитет государственной безопасности/контроля Республики Беларусь</p>
       <ul class="footer-list">
          <li>
             <a href="http://kgb.by/ru/perechen-inf-ru" target="_blank" class="footer-list-a">Перечень организаций и физических лиц, причастных к террористической деятельности (ПЛИТО)</a>
+         </li>
+         <li>
+            <a href="https://minfin.gov.by/upload/add/prev_inc_leg/reference_info/list.pdf" target="_blank" class="footer-list-a">Список публичных должностных лиц (ПДЛ)</a>
          </li>
       </ul>
    </div>
