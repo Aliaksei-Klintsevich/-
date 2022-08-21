@@ -56,8 +56,8 @@
             <summary>
                Расчет максимальной суммы кредита
             </summary><br>
-            <a href='javascript:maxAmout( )' class="maxAmout">Под коэффициент 0,4</a><br><br>
-            <a href='javascript:maxAmout( )' class="maxAmout">Под коэффициент 0,6</a>
+            <a href='javascript:maxAmoutZeroFour( )' class="maxAmout">Под коэффициент 0,4</a><br><br>
+            <a href='javascript:maxAmoutZeroSix( )' class="maxAmout">Под коэффициент 0,6</a>
          </details>
       </li>
    </ul>
@@ -130,7 +130,7 @@
                 break; // введено корректное число - выходим из цикла
             dkh = prompt ('Введите корректное число!');
         }
-            var dohod = prompt ('Введите доход Заявителя');
+            var dohod = prompt ('Введите размер дохода Заявителя');
             while ( true ) {
             var checkDohod = parseInt (dohod);
             if (!isNaN (checkDohod))
@@ -143,6 +143,134 @@
         var allRashody = parseFloat (dkh) + parseFloat (rashody);
         var koeff = (allRashody + calculation) / dohod;
             alert(monthlyPayment + ' ' + koeff);
+        }
+</script>
+<script>
+   function maxAmoutZeroFour( ) {
+            var maxAmout = 'Максимальная сумма кредита:';
+            var income = prompt ('Введите размер дохода Заявителя');
+            while ( true ) {
+            var checkLoan = parseInt (income);
+            if (!isNaN (checkLoan))
+                break; // введено корректное число - выходим из цикла
+                income = prompt ('Введите корректное число!');
+        }
+            var expenses = prompt ('Введите расходы Заявителя');
+            while ( true ) {
+            var checkRate = parseInt (expenses);
+            if (!isNaN (checkRate))
+                break; // введено корректное число - выходим из цикла
+                expenses = prompt ('Введите корректное число!');
+        }
+            var expensesCredit = prompt ('Введите расходы на ДКХ');
+            while ( true ) {
+            var checkTerm = parseInt (expensesCredit);
+            if (!isNaN (checkTerm))
+                break; // введено корректное число - выходим из цикла
+                expensesCredit = prompt ('Введите корректное число!');
+        }
+            var children = prompt ('Введите количество иждивенцев');
+            while ( true ) {
+            var checkRashody = parseInt (children);
+            if (!isNaN (checkRashody))
+                break; // введено корректное число - выходим из цикла
+                children = prompt ('Введите корректное число!');
+        }
+            var term = prompt ('Введите желаемый срок кредита');
+            while ( true ) {
+            var checkDkh = parseInt (term);
+            if (!isNaN (checkDkh))
+                break; // введено корректное число - выходим из цикла
+                term = prompt ('Введите корректное число!');
+        }
+            var interestRate = prompt ('Введите процентную ставку');
+            while ( true ) {
+            var checkDohod = parseInt (interestRate);
+            if (!isNaN (checkDohod))
+                break; // введено корректное число - выходим из цикла
+                interestRate = prompt ('Введите корректное число!');
+        }
+        var bpm = 328.5;
+        var ratio = 0.4;
+        var maxProd = 10000;
+        var minProd = 200;
+        var nbrb = parseFloat (income) * parseFloat (ratio) - parseFloat (expensesCredit); // Платеж НБ РБ
+        var bank = parseFloat (income) - parseFloat (expenses) - parseFloat (expensesCredit) - parseFloat (bpm) * (1 + 0.2 * parseFloat (children)); // Платеж БАНК
+        var amoutNbrb = parseFloat (nbrb) * 1200 * parseFloat (term) / (1200 + parseFloat (interestRate) * parseFloat (term)); // Сумма НБ РБ
+        var amoutBank = parseFloat (bank) * 1200 * parseFloat (term) / (1200 + parseFloat (interestRate) * parseFloat (term)); // Сумма БАНК
+        var result = Math.min(amoutNbrb, amoutBank, maxProd);
+        var yesOrNo = ((result < minProd));
+        if (yesOrNo) {
+        yesOrNo = 0;
+        }
+        else {
+        yesOrNo = result;
+        }
+            alert(maxAmout + ' ' + yesOrNo);
+        }
+</script>
+<script>
+   function maxAmoutZeroSix( ) {
+            var maxAmout = 'Максимальная сумма кредита:';
+            var income = prompt ('Введите размер дохода Заявителя');
+            while ( true ) {
+            var checkLoan = parseInt (income);
+            if (!isNaN (checkLoan))
+                break; // введено корректное число - выходим из цикла
+                income = prompt ('Введите корректное число!');
+        }
+            var expenses = prompt ('Введите расходы Заявителя');
+            while ( true ) {
+            var checkRate = parseInt (expenses);
+            if (!isNaN (checkRate))
+                break; // введено корректное число - выходим из цикла
+                expenses = prompt ('Введите корректное число!');
+        }
+            var expensesCredit = prompt ('Введите расходы на ДКХ');
+            while ( true ) {
+            var checkTerm = parseInt (expensesCredit);
+            if (!isNaN (checkTerm))
+                break; // введено корректное число - выходим из цикла
+                expensesCredit = prompt ('Введите корректное число!');
+        }
+            var children = prompt ('Введите количество иждивенцев');
+            while ( true ) {
+            var checkRashody = parseInt (children);
+            if (!isNaN (checkRashody))
+                break; // введено корректное число - выходим из цикла
+                children = prompt ('Введите корректное число!');
+        }
+            var term = prompt ('Введите желаемый срок кредита');
+            while ( true ) {
+            var checkDkh = parseInt (term);
+            if (!isNaN (checkDkh))
+                break; // введено корректное число - выходим из цикла
+                term = prompt ('Введите корректное число!');
+        }
+            var interestRate = prompt ('Введите процентную ставку');
+            while ( true ) {
+            var checkDohod = parseInt (interestRate);
+            if (!isNaN (checkDohod))
+                break; // введено корректное число - выходим из цикла
+                interestRate = prompt ('Введите корректное число!');
+        }
+        var bpm = 328.5;
+        var ratio = 0.6;
+        var maxProd = 10000;
+        var minProd = 200;
+        var nbrb = parseFloat (income) * parseFloat (ratio) - parseFloat (expensesCredit); // Платеж НБ РБ
+        var bank = parseFloat (income) - parseFloat (expenses) - parseFloat (expensesCredit) - parseFloat (bpm) * (1 + 0.2 * parseFloat (children)); // Платеж БАНК
+        var amoutNbrb = parseFloat (nbrb) * 1200 * parseFloat (term) / (1200 + parseFloat (interestRate) * parseFloat (term)); // Сумма НБ РБ
+        var amoutBank = parseFloat (bank) * 1200 * parseFloat (term) / (1200 + parseFloat (interestRate) * parseFloat (term)); // Сумма БАНК
+        var result = Math.min(amoutNbrb, amoutBank, maxProd);
+        var yesOrNo = ((result < minProd));
+        if (yesOrNo) {
+        yesOrNo = 0;
+        }
+        else {
+        yesOrNo = result;
+        }
+            alert(maxAmout + ' ' + yesOrNo);
         }
 </script>
     <h1 class="main-h">
