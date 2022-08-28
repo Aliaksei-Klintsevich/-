@@ -206,7 +206,11 @@
         else {
         yesOrNo = result;
         }
-            alert(maxAmout + ' ' + yesOrNo);
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var principalDebt = parseFloat (yesOrNo) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (yesOrNo) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+            alert(maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation);
         }
 </script>
 <script>
@@ -270,7 +274,11 @@
         else {
         yesOrNo = result;
         }
-            alert(maxAmout + ' ' + yesOrNo);
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var principalDebt = parseFloat (yesOrNo) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (yesOrNo) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+            alert(maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation);
         }
 </script>
 <script>
@@ -290,11 +298,27 @@
    <h1>
       Актуальная линейка кредитных продуктов
    </h1>
+
    <div style="position: relative;">
 
       <input type=radio name=FOLDER id=FOLDER1 checked class='SRadioFolder'>
       <label for=FOLDER1>R-деньги light</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
          <table border="1" class="table-style-product">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги light»
@@ -412,10 +436,25 @@
             </tr>
          </table>
       </div>
-  
+
       <input type=radio name=FOLDER id=FOLDER2 class='SRadioFolder'>
       <label for=FOLDER2>R-деньги mix</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
          <table border="1" class="table-style-product">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги mix»
@@ -537,7 +576,22 @@
 
       <input type=radio name=FOLDER id=FOLDER3 class='SRadioFolder'>
       <label for=FOLDER3>R-финанс</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -651,7 +705,22 @@
 
       <input type=radio name=FOLDER id=FOLDER4 class='SRadioFolder'>
       <label for=FOLDER4>R-партнер mix</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -774,7 +843,22 @@
 
       <input type=radio name=FOLDER id=FOLDER5 class='SRadioFolder'>
       <label for=FOLDER5>R-партнер mix light</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
   
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -897,7 +981,22 @@
 
       <input type=radio name=FOLDER id=FOLDER6 class='SRadioFolder'>
       <label for=FOLDER6>R-кредитка</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
@@ -1098,7 +1197,22 @@
 
       <input type=radio name=FOLDER id=FOLDER7 class='SRadioFolder'>
       <label for=FOLDER7>Акционный</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1237,7 +1351,22 @@
 
       <input type=radio name=FOLDER id=FOLDER8 class='SRadioFolder'>
       <label for=FOLDER8>Выгодное решение</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1368,7 +1497,22 @@
 
       <input type=radio name=FOLDER id=FOLDER9 class='SRadioFolder'>
       <label for=FOLDER9>Стабильный</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
     
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1482,7 +1626,22 @@
 
       <input type=radio name=FOLDER id=FOLDER10 class='SRadioFolder'>
       <label for=FOLDER10>Овердрафт для зарплатных клиентов</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product-r">
             <caption class="table-header">

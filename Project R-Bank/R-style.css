@@ -59,14 +59,14 @@ p, li, table {
 }
 h1 {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 70px;
   margin-bottom: 40px;
 }
 h2 {
    text-align: center;
 }
 .main-h {
-  margin-top: 980px;
+  margin-top: 1000px;
   font-size: 32px;
   margin-bottom: 80px;
 }
@@ -198,13 +198,13 @@ font-size: 40px;
 }
 
 .bg {
-  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 29%, #00008B 66%, #8B0000 100%);
-  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
-  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
+  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
+  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
   background-size: 400% 400%;
   -webkit-animation: Gradient 10s ease infinite;
 -moz-animation: Gradient 10s ease infinite;
-animation: Gradient 10s ease infinite;
+animation: Gradient 15s ease infinite;
 display: flex;
 flex-direction: column;
 align-items: stretch;
@@ -450,3 +450,79 @@ to {
           border-radius: 10px;
           color: #FFFFFF;
       }
+
+
+
+
+
+
+
+      .bg-R {
+        background: linear-gradient(132deg, #8B0000, #00008B);
+        animation: Gradient 15s ease infinite;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        padding:0;
+        margin:0px;
+      }
+      .cube {
+        position: absolute;
+        top: 50vh;
+        left: 45vw;
+        transform-origin: top left;
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        animation: cube 15s ease-in forwards infinite;
+      }
+      .cube:nth-child(2n) {
+        border-color: #FFF ;
+      }
+      .cube:nth-child(2) {
+        animation-delay: 5s;
+        left: 25vw;
+        top: 40vh;
+      }
+      .cube:nth-child(3) {
+        animation-delay: 7s;
+        left: 75vw;
+        top: 50vh;
+      }
+      .cube:nth-child(4) {
+        animation-delay: 9s;
+        left: 90vw;
+        top: 10vh;
+      }
+      .cube:nth-child(5) {
+        animation-delay: 11s;
+        left: 10vw;
+        top: 85vh;
+      }
+      .cube:nth-child(6) {
+        animation-delay: 13s;
+        left: 50vw;
+        top: 10vh;
+      }
+      /* Animate Background*/
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes cube {
+        from {
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          opacity: 0.3;
+        }
+        to {
+          transform: scale(20) rotate(960deg) translate(-50%, -50%);
+          opacity: 0.3;
+        }
+      }
+      

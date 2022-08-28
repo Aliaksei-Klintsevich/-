@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-      <style>
-         body {
+    <style>
+      body {
     background-color: #fafafa;
     margin: 0;
  }
@@ -67,14 +67,14 @@
   }
   h1 {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 70px;
     margin-bottom: 40px;
   }
   h2 {
      text-align: center;
   }
   .main-h {
-    margin-top: 980px;
+    margin-top: 1000px;
     font-size: 32px;
     margin-bottom: 80px;
   }
@@ -206,13 +206,13 @@
 }
 
   .bg {
-    background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 29%, #00008B 66%, #8B0000 100%);
-    background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
-    background: linear-gradient(45deg, #00008B 0%,#FFFFFF 29%,#00008B 66%,#8B0000 100%);
+    background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
+    background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+    background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
     background-size: 400% 400%;
     -webkit-animation: Gradient 10s ease infinite;
 	-moz-animation: Gradient 10s ease infinite;
-	animation: Gradient 10s ease infinite;
+	animation: Gradient 15s ease infinite;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -458,7 +458,82 @@ div.bg-footer::after {
             border-radius: 10px;
             color: #FFFFFF;
         }
-      </style>
+
+
+
+
+
+
+
+        .bg-R {
+          background: linear-gradient(132deg, #8B0000, #00008B);
+          animation: Gradient 15s ease infinite;
+          position: relative;
+          height: 100vh;
+          width: 100%;
+          overflow: hidden;
+          padding:0;
+          margin:0px;
+        }
+        .cube {
+          position: absolute;
+          top: 50vh;
+          left: 45vw;
+          transform-origin: top left;
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          animation: cube 15s ease-in forwards infinite;
+        }
+        .cube:nth-child(2n) {
+          border-color: #FFF ;
+        }
+        .cube:nth-child(2) {
+          animation-delay: 5s;
+          left: 25vw;
+          top: 40vh;
+        }
+        .cube:nth-child(3) {
+          animation-delay: 7s;
+          left: 75vw;
+          top: 50vh;
+        }
+        .cube:nth-child(4) {
+          animation-delay: 9s;
+          left: 90vw;
+          top: 10vh;
+        }
+        .cube:nth-child(5) {
+          animation-delay: 11s;
+          left: 10vw;
+          top: 85vh;
+        }
+        .cube:nth-child(6) {
+          animation-delay: 13s;
+          left: 50vw;
+          top: 10vh;
+        }
+        /* Animate Background*/
+        @keyframes Gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        @keyframes cube {
+          from {
+            transform: scale(0) rotate(0deg) translate(-50%, -50%);
+            opacity: 0.3;
+          }
+          to {
+            transform: scale(20) rotate(960deg) translate(-50%, -50%);
+            opacity: 0.3;
+          }
+        }
+        </style>
 </head>
 <body>
    <header class="header">
@@ -659,7 +734,11 @@ div.bg-footer::after {
         else {
         yesOrNo = result;
         }
-            alert(maxAmout + ' ' + yesOrNo);
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var principalDebt = parseFloat (yesOrNo) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (yesOrNo) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+            alert(maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation);
         }
 </script>
 <script>
@@ -723,7 +802,11 @@ div.bg-footer::after {
         else {
         yesOrNo = result;
         }
-            alert(maxAmout + ' ' + yesOrNo);
+        var monthlyPayment = 'Ежемесячный платеж:';
+        var principalDebt = parseFloat (yesOrNo) / parseFloat (term); // Расчет суммы основного долга
+        var percentages = parseFloat (yesOrNo) * parseFloat (interestRate) * 30 / 360 / 100; //Расчет суммы процентов годовых
+        var calculation = principalDebt + percentages; //Основной долг + проценты
+            alert(maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation);
         }
 </script>
 <script>
@@ -743,11 +826,27 @@ div.bg-footer::after {
    <h1>
       Актуальная линейка кредитных продуктов
    </h1>
+
    <div style="position: relative;">
 
       <input type=radio name=FOLDER id=FOLDER1 checked class='SRadioFolder'>
       <label for=FOLDER1>R-деньги light</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
          <table border="1" class="table-style-product">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги light»
@@ -865,10 +964,25 @@ div.bg-footer::after {
             </tr>
          </table>
       </div>
-  
+
       <input type=radio name=FOLDER id=FOLDER2 class='SRadioFolder'>
       <label for=FOLDER2>R-деньги mix</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
          <table border="1" class="table-style-product">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги mix»
@@ -990,7 +1104,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER3 class='SRadioFolder'>
       <label for=FOLDER3>R-финанс</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1104,7 +1233,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER4 class='SRadioFolder'>
       <label for=FOLDER4>R-партнер mix</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1227,7 +1371,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER5 class='SRadioFolder'>
       <label for=FOLDER5>R-партнер mix light</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
   
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1350,7 +1509,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER6 class='SRadioFolder'>
       <label for=FOLDER6>R-кредитка</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
  
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
@@ -1551,7 +1725,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER7 class='SRadioFolder'>
       <label for=FOLDER7>Акционный</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1690,7 +1879,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER8 class='SRadioFolder'>
       <label for=FOLDER8>Выгодное решение</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1821,7 +2025,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER9 class='SRadioFolder'>
       <label for=FOLDER9>Стабильный</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
     
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -1935,7 +2154,22 @@ div.bg-footer::after {
 
       <input type=radio name=FOLDER id=FOLDER10 class='SRadioFolder'>
       <label for=FOLDER10>Овердрафт для зарплатных клиентов</label>
-      <div class='SFolderDiv bg-footer'>
+      <div class='SFolderDiv bg-R'>
+         <div class="cube">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+         </div>
    
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
