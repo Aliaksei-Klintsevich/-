@@ -70,11 +70,6 @@ h2 {
   font-size: 32px;
   margin-bottom: 80px;
 }
-.password-h {
-  text-align: center;
-  font-size: 32px;
-  margin-top: 1000px;
-}
 .table-style { 
    border-collapse: collapse;   /*Таблица*/
    margin: 0 auto;
@@ -516,10 +511,11 @@ to {
 
 
       .card{
-        margin-left: 500px;
+        margin-left: 450px;
+        margin-top: 1000px;
         cursor:pointer;
         position:relative;
-        width:930px;
+        width:1000px;
         height:600px;
         background:#fff;
         transform-style:preserve-3d;
@@ -527,8 +523,17 @@ to {
         transition:1s;
         box-shadow:inset 300px 0 50px rgba(0,0,0,0.15), 0 20px 20px rgba(0,0,0,0.15);
       }
+      .h-pass {
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        color: darkblue;
+        text-align: center;
+        font-size: 26px;
+        font-family: cursive;
+      }
       .card:hover{
-        transform:perspective(2000px) translateX(50%);
+        transform:perspective(2500px) translateX(0%);
           box-shadow:inset 20px 0 50px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
       }
       .card .cover{
@@ -552,7 +557,7 @@ to {
         position:absolute;
         content:"";
         width:560px;
-        height:150%;
+        height:160%;
         background:#fff;
         transform:rotate(90deg);
         box-shadow:0 0 0 18px #8B0000;
