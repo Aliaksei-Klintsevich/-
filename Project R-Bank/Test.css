@@ -57,10 +57,10 @@ body {
  p, li, table {
      font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
   }
-  h1 {
+  .main-h-prod {
     text-align: center;
     margin-top: 70px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   h2 {
      text-align: center;
@@ -90,6 +90,12 @@ body {
   margin-top: 15px;
   width: 95%;
   text-align: justify;
+}
+.table-style-contact { 
+  border-collapse: collapse;   /*Таблица*/
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 10px;
 }
 .table-style-password { 
   border-collapse: collapse;   /*Таблица*/
@@ -144,7 +150,7 @@ body {
    color: #FFFFFF;
  }
  .autor {
-   margin-top: 500px;
+   margin-top: 570px;
    margin-left: 800px;
    position: absolute;
    z-index: 1;
@@ -212,6 +218,11 @@ body {
     text-align: center;
     padding: 0;
 }
+.contact {
+  display: flex;
+  justify-content: space-around;
+}
+
 
   .bg {
     background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
@@ -270,7 +281,8 @@ div.bg::after {
   align-items: stretch;
   justify-content: space-evenly;
   overflow: hidden;
-  position: relative; 
+  position: relative;
+  margin-top: 50px; 
 }
 
 div.bg-footer::before, 
