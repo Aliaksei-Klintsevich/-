@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-   <style>
+    <style>
       body {
     background-color: #fafafa;
     margin: 0;
@@ -493,7 +493,6 @@ div.bg-footer::after {
 
         .bg-R {
           background: linear-gradient(132deg, #8B0000, #00008B);
-          animation: Gradient 15s ease infinite;
           position: relative;
           height: 100vh;
           width: 100%;
@@ -503,12 +502,21 @@ div.bg-footer::after {
         }
         .cube {
           position: absolute;
-          top: 50vh;
-          left: 45vw;
-          transform-origin: top left;
-          transform: scale(0) rotate(0deg) translate(-50%, -50%);
-          animation: cube 15s ease-in forwards infinite;
+          animation-name: rotation;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          bottom: 0;
+          z-index: 1;
         }
+        @keyframes rotation {
+          0% {
+              transform:rotate(0deg);
+          }
+          100% {
+              transform:rotate(360deg);
+          }
+      }
 
         /* Animate Background*/
         @keyframes Gradient {
@@ -662,13 +670,19 @@ div.bg-footer::after {
           transition:800ms ease all;
         }
 
-   </style>
+
+
+    </style>
 </head>
 <body>
    <header class="header" id="UP">
       <ul class="header-list">
-         <li><a href="https://rbank.by/" target="_blank">Официальный сайт <span style="font-weight:bold">ЗАО</span> «<span class="header-text-page-1">Банк</span> «<span class="header-text-page-2">Решение</span>»</a></li>
-         <li><a href="#contact">Контактная информация</a></li>
+         <li>
+            <a href="https://rbank.by/" target="_blank">Официальный сайт <span style="font-weight:bold">ЗАО</span> «<span class="header-text-page-1">Банк</span> «<span class="header-text-page-2">Решение</span>»</a>
+         </li>
+         <li>
+            <a href="#contact">Контактная информация</a>
+         </li>
       </ul>
    </header>
    <div class="bg">
@@ -3981,7 +3995,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER1 checked class='SRadioFolder'>
       <label for=FOLDER1>R-деньги mix</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -3995,7 +4009,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
          <table border="1" class="table-style-product">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги mix»
@@ -4118,7 +4132,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER2 class='SRadioFolder'>
       <label for=FOLDER2>R-деньги light</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4132,7 +4146,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
                Условия предоставления физическим лицам кредита на потребительские нужды «R-деньги light»
@@ -4271,7 +4285,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER3 class='SRadioFolder'>
       <label for=FOLDER3>R-финанс</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4285,7 +4299,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -4400,7 +4414,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER4 class='SRadioFolder'>
       <label for=FOLDER4>R-партнер mix</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4414,7 +4428,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
  
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -4538,7 +4552,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER5 class='SRadioFolder'>
       <label for=FOLDER5>R-партнер mix light</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4552,7 +4566,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
   
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -4676,7 +4690,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER6 class='SRadioFolder'>
       <label for=FOLDER6>R-кредитка</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4690,7 +4704,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
  
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
@@ -4892,7 +4906,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER7 class='SRadioFolder'>
       <label for=FOLDER7>Акционный</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -4906,7 +4920,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -5046,7 +5060,7 @@ div.bg-footer::after {
       <input type=radio name=FOLDER id=FOLDER8 class='SRadioFolder'>
       <label for=FOLDER8>Выгодное решение</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -5060,7 +5074,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
    
          <table border="1" class="table-style-product">
             <caption class="table-header">
@@ -5189,139 +5203,10 @@ div.bg-footer::after {
          </table>
       </div>
 
-      <input type=radio name=FOLDER id=FOLDER9 class='SRadioFolder'>
-      <label for=FOLDER9>Стабильный</label>
-      <div class='SFolderDiv bg-R'>
-         <div class="cube">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
-            preserveAspectRatio="xMidYMid meet">
-           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
-           fill="#8B0000" stroke="none">
-           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
-           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
-           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
-           535 534 -535 535 -535 535 -298 -298z"/>
-           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
-           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
-           </g>
-           </svg>
-         </div>
-    
-         <table border="1" class="table-style-product">
-            <caption class="table-header">
-               Условия предоставления физическим лицам кредита на потребительские нужды по специальной процедуре «Стабильный»
-            </caption>
-            <tr>
-               <td>
-                  Срок кредита 
-               </td>
-               <td style="width: 40%;">
-                 <b>12, 24, 36, 48</b> месяцев
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Минимальная сумма кредита 
-               </td>
-               <td>
-                  <b>200</b> белорусских рублей
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Максимальная сумма кредита 
-               </td>
-               <td>
-                  <b>10 000</b> белорусских рублей
-               </td>            
-            </tr>
-            <tr>
-               <td>
-                  Процентная ставка за пользование кредитом
-               </td>
-               <td>
-                  <b>14%</b>
-               </td>            
-            </tr>
-            <tr>
-               <td>
-                  Тип процентной ставки за пользование кредитом
-               </td>
-               <td>
-                  Фиксированная
-               </td>            
-            </tr>
-            <tr>
-               <td>
-                  Размер процентов, начисляемых на сумму просроченной задолженности  по основному долгу
-               </td>
-               <td>
-                  Процентная ставка за пользование кредитом,  увеличенная в 1,99 раза
-               </td>          
-            </tr>
-            <tr>
-               <td>
-                  Способ обеспечения исполнения обязательств кредитополучателем
-               </td>
-               <td>
-                  Неустойка
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Порядок погашения задолженности по кредиту (основному долгу и процентам)
-               </td>
-               <td>
-                  В течение срока действия Кредитного договора ежемесячные платежи в погашение задолженности по кредиту производятся:<br>а) не позднее 20-го числа каждого месяца, начиная с месяца, следующего за месяцем окончания льготного периода;<br>б) последний платеж - не позднее срока полного погашения кредита.
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Штраф за непогашение в срок задолженности по кредиту и/или процентам за пользование им
-               </td>
-               <td>
-                  1 (одна) базовая величина за каждый факт нарушения
-               </td>             
-            </tr>
-            <tr>
-               <td>
-                  Штраф за предоставление недостоверных сведений в Заявлении-анкете, несвоевременное уведомление Банка об изменении паспортных и иных данных кредитополучателя  
-               </td>
-               <td>
-                  1 (одна) базовая величина
-               </td>        
-            </tr>
-            <tr>
-               <td>
-                  Предоставление документа о доходах   
-               </td>
-               <td>
-                  Не требуется
-               </td>
-            </tr>
-            </table>
-            <table border="1" class="table-style-product">
-            <tr>
-               <td colspan="3">
-                  Особые условия
-               </td>
-            </tr>
-            <tr>
-               <td style="width: 10%; text-align: center;">
-                  Условие 1
-               </td>
-               <td colspan="2">
-                  Порядок предоставления кредита: в безналичном порядке путем перечисления денежных средств со счета по учету кредитной задолженности кредитополучателя на счет юридического лица/ИП в рамках договоров о сотрудничестве в области потребительского кредитования.
-               </td>
-            </tr>
-         </table>
-      </div>
-
       <input type=radio name=FOLDER id=FOLDER10 class='SRadioFolder'>
       <label for=FOLDER10>Овердрафт для зарплатных клиентов</label>
       <div class='SFolderDiv bg-R'>
-         <div class="cube">
+         <!--<div class="cube">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="113.000000pt" height="117.000000pt" viewBox="0 0 213.000000 217.000000"
             preserveAspectRatio="xMidYMid meet">
@@ -5335,7 +5220,7 @@ div.bg-footer::after {
            <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
            </g>
            </svg>
-         </div>
+         </div>-->
    
          <table border="1" class="table-style-product-r">
             <caption class="table-header">
@@ -5924,6 +5809,19 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
    </div>
    </div>
    <p class="autor">BY ALIAKSEI KLINTSEVICH, 2022</p>
+   <span class="cube"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="60.000000pt" height="63.000000pt" viewBox="0 0 213.000000 217.000000"
+      preserveAspectRatio="xMidYMid meet">
+     <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+     fill="#8B0000" stroke="none">
+     <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+     149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+     -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+     535 534 -535 535 -535 535 -298 -298z"/>
+     <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+     <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+     </g>
+     </svg></span>
    <div class="footer-waves">
       <div>
       <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">

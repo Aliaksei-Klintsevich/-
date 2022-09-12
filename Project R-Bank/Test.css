@@ -485,7 +485,6 @@ div.bg-footer::after {
 
         .bg-R {
           background: linear-gradient(132deg, #8B0000, #00008B);
-          animation: Gradient 15s ease infinite;
           position: relative;
           height: 100vh;
           width: 100%;
@@ -495,12 +494,21 @@ div.bg-footer::after {
         }
         .cube {
           position: absolute;
-          top: 50vh;
-          left: 45vw;
-          transform-origin: top left;
-          transform: scale(0) rotate(0deg) translate(-50%, -50%);
-          animation: cube 15s ease-in forwards infinite;
+          animation-name: rotation;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          bottom: 0;
+          z-index: 1;
         }
+        @keyframes rotation {
+          0% {
+              transform:rotate(0deg);
+          }
+          100% {
+              transform:rotate(360deg);
+          }
+      }
 
         /* Animate Background*/
         @keyframes Gradient {
