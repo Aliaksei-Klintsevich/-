@@ -672,7 +672,7 @@ div.bg-footer::after {
 
 
 
-    </style>
+    </style>  
 </head>
 <body>
    <header class="header" id="UP">
@@ -3770,6 +3770,25 @@ div.bg-footer::after {
         }
 </script>
 <script>
+   function creditTwo() {
+     var monthlyPayment = 'Ежемесячный платеж:';
+     var a = parseInt(document.getElementById("a").value);
+     var b = parseInt(document.getElementById("b").value);
+     var c = parseInt(document.getElementById("c").value);
+
+     if (isNaN(a) == true) a = 0;
+     if (isNaN(b) == true) b = 0;
+     if (isNaN(c) == true) c = 0;
+
+     var principalDebt = parseFloat (a) / parseFloat (c); // Расчет суммы основного долга
+     var percentages = parseFloat (a) * parseFloat (b) * 30 / 360 / 100; //Расчет суммы процентов годовых
+     var calculation = principalDebt + percentages; //Основной долг + проценты
+     
+
+     document.getElementById("result").innerHTML = monthlyPayment + ' ' + calculation;
+   }
+ </script>
+<script>
    function ratio( ) {
             var monthlyPayment = 'Коэффициент кредитоспособности:';
             var loanAmount = prompt ('Введите сумму договора');
@@ -4180,8 +4199,8 @@ div.bg-footer::after {
                   Процентная ставка за пользование кредитом
                </td>
                <td>
-                  <b>24%</b><br>
-                  <b>22,9%</b> (для клиентов, которые ранее заключали кредитные договоры в ЗАО «Банк «Решение» и на момент обращения, не имеют действующих кредитных договоров в ЗАО «Банк «Решение»)
+                  <b>23,33%</b><br>
+                  <b>21,9%</b> (для клиентов, которые ранее заключали кредитные договоры в ЗАО «Банк «Решение» и на момент обращения, не имеют действующих кредитных договоров в ЗАО «Банк «Решение»)
                </td>            
             </tr>
             <tr>
@@ -4750,7 +4769,7 @@ div.bg-footer::after {
                   Процентная ставка за пользование кредитом:
                </td>
                <td>
-                  Ставка рефинансирования, увеличенная в 2 (два) раза <b>(24%)</b>
+                  РВСР <b>(23,33%)</b>
                </td>            
             </tr>
             <tr>
@@ -4961,10 +4980,10 @@ div.bg-footer::after {
                </td>
                <td>
                   <br><b>18%</b><br>
-                  <b>24%</b><br>
+                  <b>23,33%</b><br>
                   <b>26%</b><br>
                   <b>28%</b><br>
-                  <b>24%</b>
+                  <b>23,33%</b>
                </td>            
             </tr>
             <tr>
@@ -5110,7 +5129,7 @@ div.bg-footer::after {
                   Процентная ставка за пользование кредитом
                </td>
                <td>
-                  <b>24%</b>
+                  <b>23,33%</b>
                </td>            
             </tr>
             <tr>
@@ -5308,7 +5327,7 @@ div.bg-footer::after {
                   Размер процентной ставки по кредиту, годовых
                </td>
                <td>
-                  Ставка рефинансирования, увеличенная в 1,7 раза <b>(20,4%)</b>
+                  РВСР <b>(23,33%)</b>
                </td>
             </tr>
             <tr>
@@ -5600,7 +5619,23 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
          <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
       </li>
       <li>
-         <a href='javascript:credit( )'>Расчет ежемесячного платежа</a>
+         <details>
+            <summary>
+               Расчет ежемесячного платежа
+            </summary>
+            <form>
+               <br>
+               Сумма договора
+               <input id="a" type="text" placeholder="Введите значение"><br>
+               Процентная ставка
+               <input id="b" type="text" placeholder="Введите значение"><br>
+               Количество месяцев
+               <input id="c" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Рассчитать" onclick="creditTwo();"><br>
+             </form>
+             <div id="result"></div>
+         </details>
       </li>
       <li>
          <a href='javascript:ratio( )'>Расчет коэффициента кредитоспособности</a>
