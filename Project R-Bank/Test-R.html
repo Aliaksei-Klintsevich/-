@@ -3743,9 +3743,9 @@ div.bg-footer::after {
 <script>
    function creditTwo() {
      var monthlyPayment = 'Ежемесячный платеж:';
-     var a = parseInt(document.getElementById("a").value);
-     var b = parseInt(document.getElementById("b").value);
-     var c = parseInt(document.getElementById("c").value);
+     var a = parseFloat(document.getElementById("a").value);
+     var b = parseFloat(document.getElementById("b").value);
+     var c = parseFloat(document.getElementById("c").value);
 
      if (isNaN(a) == true) a = 0;
      if (isNaN(b) == true) b = 0;
@@ -3756,7 +3756,7 @@ div.bg-footer::after {
      var calculation = principalDebt + percentages; //Основной долг + проценты
      
 
-     document.getElementById("result").innerHTML = monthlyPayment + ' ' + calculation;
+     document.getElementById("result").innerHTML = monthlyPayment + ' ' + ( calculation.toFixed(2) );
    }
  </script>
 <script>
@@ -3790,12 +3790,12 @@ div.bg-footer::after {
 <script>
    function ratioTwo() {
     var monthlyPayment = 'Коэффициент кредитоспособности:';
-    var ak = parseInt(document.getElementById("ak").value);
-    var bk = parseInt(document.getElementById("bk").value);
-    var ck = parseInt(document.getElementById("ck").value);
-    var dk = parseInt(document.getElementById("dk").value);
-    var ek = parseInt(document.getElementById("ek").value);
-    var fk = parseInt(document.getElementById("fk").value);
+    var ak = parseFloat(document.getElementById("ak").value);
+    var bk = parseFloat(document.getElementById("bk").value);
+    var ck = parseFloat(document.getElementById("ck").value);
+    var dk = parseFloat(document.getElementById("dk").value);
+    var ek = parseFloat(document.getElementById("ek").value);
+    var fk = parseFloat(document.getElementById("fk").value);
 
     if (isNaN(ak) == true) ak = 0;
     if (isNaN(bk) == true) bk = 0;
@@ -3811,18 +3811,18 @@ div.bg-footer::after {
     var koeff = (allRashody + calculation) / fk;
 
 
-    document.getElementById("resultTwo").innerHTML = monthlyPayment + ' ' + koeff;
+    document.getElementById("resultTwo").innerHTML = monthlyPayment + ' ' + ( koeff.toFixed(2) );
 }
 </script>
 <script>
    function maxAmoutZeroFourTwo() {
     var maxAmout = 'Максимальная сумма кредита:';
-    var am = parseInt(document.getElementById("am").value); // Размер дохода заявителя
-    var bm = parseInt(document.getElementById("bm").value); // Расходы на коммунальные услуги и мобильную связь
-    var cm = parseInt(document.getElementById("cm").value); // Расходы на ДКХ
-    var dm = parseInt(document.getElementById("dm").value); // Количество иждивенцев
-    var em = parseInt(document.getElementById("em").value); // Срок кредита
-    var fm = parseInt(document.getElementById("fm").value); // Процентная ставка
+    var am = parseFloat(document.getElementById("am").value); // Размер дохода заявителя
+    var bm = parseFloat(document.getElementById("bm").value); // Расходы на коммунальные услуги и мобильную связь
+    var cm = parseFloat(document.getElementById("cm").value); // Расходы на ДКХ
+    var dm = parseFloat(document.getElementById("dm").value); // Количество иждивенцев
+    var em = parseFloat(document.getElementById("em").value); // Срок кредита
+    var fm = parseFloat(document.getElementById("fm").value); // Процентная ставка
 
     if (isNaN(am) == true) am = 0;
     if (isNaN(bm) == true) bm = 0;
@@ -3853,18 +3853,18 @@ div.bg-footer::after {
     var calculation = principalDebt + percentages; //Основной долг + проценты
 
 
-    document.getElementById("resultThree").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation;
+    document.getElementById("resultThree").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
 }
 </script>
 <script>
    function maxAmoutZeroFourThree() {
     var maxAmout = 'Максимальная сумма кредита:';
-    var ams = parseInt(document.getElementById("ams").value); // Размер дохода заявителя
-    var bms = parseInt(document.getElementById("bms").value); // Расходы на коммунальные услуги и мобильную связь
-    var cms = parseInt(document.getElementById("cms").value); // Расходы на ДКХ
-    var dms = parseInt(document.getElementById("dms").value); // Количество иждивенцев
-    var ems = parseInt(document.getElementById("ems").value); // Срок кредита
-    var fms = parseInt(document.getElementById("fms").value); // Процентная ставка
+    var ams = parseFloat(document.getElementById("ams").value); // Размер дохода заявителя
+    var bms = parseFloat(document.getElementById("bms").value); // Расходы на коммунальные услуги и мобильную связь
+    var cms = parseFloat(document.getElementById("cms").value); // Расходы на ДКХ
+    var dms = parseFloat(document.getElementById("dms").value); // Количество иждивенцев
+    var ems = parseFloat(document.getElementById("ems").value); // Срок кредита
+    var fms = parseFloat(document.getElementById("fms").value); // Процентная ставка
 
     if (isNaN(ams) == true) ams = 0;
     if (isNaN(bms) == true) bms = 0;
@@ -3895,9 +3895,116 @@ div.bg-footer::after {
     var calculation = principalDebt + percentages; //Основной долг + проценты
 
 
-    document.getElementById("resultFour").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + calculation;
+    document.getElementById("resultFour").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
 }
 </script>
+<h2 class="main-h-prod">
+   Расчет кредитоспособности
+</h2>
+ <div class="btn">
+   <ul class="btn-item">
+      <li>
+         <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет ежемесячного платежа
+            </summary>
+            <form>
+               <br>
+               Сумма договора
+               <input id="a" type="text" placeholder="Введите значение"><br>
+               Процентная ставка
+               <input id="b" type="text" placeholder="Введите значение"><br>
+               Количество месяцев
+               <input id="c" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Рассчитать" onclick="creditTwo();"><br>
+             </form>
+             <div id="result"></div>
+         </details>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет коэффициента кредитоспособности
+            </summary>
+            <form>
+               <br>
+               Сумма договора
+               <input id="ak" type="text" placeholder="Введите значение"><br>
+               Процентная ставка
+               <input id="bk" type="text" placeholder="Введите значение"><br>
+               Количество месяцев
+               <input id="ck" type="text" placeholder="Введите значение"><br>
+               Расходы на коммунальные услуги и мобильную связь
+               <input id="dk" type="text" placeholder="Введите значение"><br>
+               Расходы на ДКХ
+               <input id="ek" type="text" placeholder="Введите значение"><br>
+               Размер дохода заявителя
+               <input id="fk" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Рассчитать" onclick="ratioTwo();"><br>
+             </form>
+             <div id="resultTwo"></div>
+         </details>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет максимальной суммы кредита
+            </summary><br>
+            <details>
+               <summary>
+                  Под коэффициент 0,4
+               </summary>
+               <form>
+                  <br>
+                  Размер дохода заявителя
+                  <input id="am" type="text" placeholder="Введите значение"><br>
+                  Расходы на коммунальные услуги и мобильную связь
+                  <input id="bm" type="text" placeholder="Введите значение"><br>
+                  Расходы на ДКХ
+                  <input id="cm" type="text" placeholder="Введите значение"><br>
+                  Количество иждивенцев
+                  <input id="dm" type="text" placeholder="Введите значение"><br>
+                  Срок кредита
+                  <input id="em" type="text" placeholder="Введите значение"><br>
+                  Процентная ставка
+                  <input id="fm" type="text" placeholder="Введите значение"><br>
+                  <br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourTwo();"><br>
+                </form>
+                <div id="resultThree"></div>
+            </details><br>
+            <details>
+               <summary>
+                  Под коэффициент 0,6
+               </summary>
+               <form>
+                  <br>
+                  Размер дохода заявителя
+                  <input id="ams" type="text" placeholder="Введите значение"><br>
+                  Расходы на коммунальные услуги и мобильную связь
+                  <input id="bms" type="text" placeholder="Введите значение"><br>
+                  Расходы на ДКХ
+                  <input id="cms" type="text" placeholder="Введите значение"><br>
+                  Количество иждивенцев
+                  <input id="dms" type="text" placeholder="Введите значение"><br>
+                  Срок кредита
+                  <input id="ems" type="text" placeholder="Введите значение"><br>
+                  Процентная ставка
+                  <input id="fms" type="text" placeholder="Введите значение"><br>
+                  <br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourThree();"><br>
+                </form>
+                <div id="resultFour"></div>
+            </details>
+         </details>
+      </li>
+   </ul>
+</div>
    <h2 class="main-h-prod">
       Актуальная линейка кредитных продуктов
    </h2>
@@ -5503,111 +5610,14 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
      
    </div>
  </div>
- <h2 class="main-h-prod" id="contact">
-   Расчет кредитоспособности
-</h2>
  <div class="btn">
    <ul class="btn-item">
       <li>
-         <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
+        Список должностей в разрезе категорий
       </li>
       <li>
-         <details>
-            <summary>
-               Расчет ежемесячного платежа
-            </summary>
-            <form>
-               <br>
-               Сумма договора
-               <input id="a" type="text" placeholder="Введите значение"><br>
-               Процентная ставка
-               <input id="b" type="text" placeholder="Введите значение"><br>
-               Количество месяцев
-               <input id="c" type="text" placeholder="Введите значение"><br>
-               <br>
-               <input type="button" value="Рассчитать" onclick="creditTwo();"><br>
-             </form>
-             <div id="result"></div>
-         </details>
-      </li>
-      <li>
-         <details>
-            <summary>
-               Расчет коэффициента кредитоспособности
-            </summary>
-            <form>
-               <br>
-               Сумма договора
-               <input id="ak" type="text" placeholder="Введите значение"><br>
-               Процентная ставка
-               <input id="bk" type="text" placeholder="Введите значение"><br>
-               Количество месяцев
-               <input id="ck" type="text" placeholder="Введите значение"><br>
-               Расходы на коммунальные услуги и мобильную связь
-               <input id="dk" type="text" placeholder="Введите значение"><br>
-               Расходы на ДКХ
-               <input id="ek" type="text" placeholder="Введите значение"><br>
-               Размер дохода заявителя
-               <input id="fk" type="text" placeholder="Введите значение"><br>
-               <br>
-               <input type="button" value="Рассчитать" onclick="ratioTwo();"><br>
-             </form>
-             <div id="resultTwo"></div>
-         </details>
-      </li>
-      <li>
-         <details>
-            <summary>
-               Расчет максимальной суммы кредита
-            </summary><br>
-            <details>
-               <summary>
-                  Под коэффициент 0,4
-               </summary>
-               <form>
-                  <br>
-                  Размер дохода заявителя
-                  <input id="am" type="text" placeholder="Введите значение"><br>
-                  Расходы на коммунальные услуги и мобильную связь
-                  <input id="bm" type="text" placeholder="Введите значение"><br>
-                  Расходы на ДКХ
-                  <input id="cm" type="text" placeholder="Введите значение"><br>
-                  Количество иждивенцев
-                  <input id="dm" type="text" placeholder="Введите значение"><br>
-                  Срок кредита
-                  <input id="em" type="text" placeholder="Введите значение"><br>
-                  Процентная ставка
-                  <input id="fm" type="text" placeholder="Введите значение"><br>
-                  <br>
-                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourTwo();"><br>
-                </form>
-                <div id="resultThree"></div>
-            </details><br>
-            <details>
-               <summary>
-                  Под коэффициент 0,6
-               </summary>
-               <form>
-                  <br>
-                  Размер дохода заявителя
-                  <input id="ams" type="text" placeholder="Введите значение"><br>
-                  Расходы на коммунальные услуги и мобильную связь
-                  <input id="bms" type="text" placeholder="Введите значение"><br>
-                  Расходы на ДКХ
-                  <input id="cms" type="text" placeholder="Введите значение"><br>
-                  Количество иждивенцев
-                  <input id="dms" type="text" placeholder="Введите значение"><br>
-                  Срок кредита
-                  <input id="ems" type="text" placeholder="Введите значение"><br>
-                  Процентная ставка
-                  <input id="fms" type="text" placeholder="Введите значение"><br>
-                  <br>
-                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourThree();"><br>
-                </form>
-                <div id="resultFour"></div>
-            </details>
-         </details>
-      </li>
+         Список публичных должностных лиц
+       </li>
    </ul>
 </div>
    <div class="fix">
@@ -5803,7 +5813,7 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
    </div>
    </div>
    <p class="autor">BY ALIAKSEI KLINTSEVICH, 2022</p>
-   <span class="cube"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+   <!--<span class="cube"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
       width="60.000000pt" height="63.000000pt" viewBox="0 0 213.000000 217.000000"
       preserveAspectRatio="xMidYMid meet">
      <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
@@ -5815,7 +5825,7 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
      <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
      <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
      </g>
-     </svg></span>
+     </svg></span>-->
    <div class="footer-waves">
       <div>
       <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">

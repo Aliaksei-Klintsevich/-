@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
+<script src="/jquery.min.js"></script>
+<script src="/select2/dist/js/select2.min.js"></script>
+<script src="/select2/dist/js/i18n/ru.js"></script>
+    <style>
+        /* Кнопка выпадающего списка */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Кнопка выпадающего меню при наведении и фокусировке */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* Поле поиска */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Поле поиска, когда он получает фокус/нажал на */
+#myInput:focus {outline: 3px solid #ddd;}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  overflow: scroll;
+  height: 600px;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Показать выпадающее меню (используйте JS, чтобы добавить этот класс в .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
+.show {display:block;}
+
+
+
+
+
+
+
+
+input, select {
+    width: 300px;
+    margin: 10px auto;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Выпадающий</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#ttt"><option value=1 selected>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#ttt"><option value=1>Компьютерная техника</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+          <a href="#tttr"><option value=2>Программирование</option></a>
+        </div>
+        <div id="result" style="margin-top: 600px;"></div>
+      </div>
+      <script>
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+function filterFunction() {
+
+    var ttt = parseInt(document.getElementById("ttt").value);
+    var tttr = parseInt(document.getElementById("tttr").value);
+
+  var input, filter, ul, li, a, option, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+      </script>
+
+
+
+<select class="js-select2" name="city" placeholder="Выберите город">
+	<option value=""></option>
+	<option value="367">Абаза</option>
+	<option value="340">Абакан</option>	
+	<option value="369">Абдулино</option>	
+	<option value="370">Абинск</option>	
+	<option value="371">Агидель</option>	
+</select>
+ 
+<link rel="stylesheet" href="/select2/dist/css/select2.min.css">
+<script src="/jquery.min.js"></script>
+<script src="/select2/dist/js/select2.min.js"></script>
+<script src="/select2/dist/js/i18n/ru.js"></script>
+ 
+<script>
+$(document).ready(function() {
+	$('.js-select2').select2({
+		placeholder: "Выберите город",
+		maximumSelectionLength: 2,
+		language: "ru"
+	});
+});
+</script>
+
+</body>
+</html>

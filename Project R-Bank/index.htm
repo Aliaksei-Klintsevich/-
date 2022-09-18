@@ -1,0 +1,24 @@
+<select class="js-select2" name="city" placeholder="Выберите город">
+    <option value=""></option>
+    <option value="367">Абаза</option>
+    <option value="340">Абакан</option>    
+    <option value="369">Абдулино</option>    
+    <option value="370">Абинск</option>    
+    <option value="371">Агидель</option>    
+    ...
+</select>
+
+<link rel="stylesheet" href="/select2/dist/css/select2.min.css">
+<script src="/jquery.min.js"></script>
+<script src="/select2/dist/js/select2.min.js"></script>
+<script src="/select2/dist/js/i18n/ru.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.js-select2').select2({
+        placeholder: "Выберите город",
+        maximumSelectionLength: 2,
+        language: "ru"
+    });
+});
+</script>
