@@ -222,7 +222,10 @@ body {
   display: flex;
   justify-content: space-around;
 }
-
+input {
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
 
   .bg {
     background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);

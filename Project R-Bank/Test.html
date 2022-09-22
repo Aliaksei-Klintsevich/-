@@ -3241,13 +3241,13 @@ organizationsH[countryName]=capitalName;
 
 // Получение информации о стране
 function pdl () {
-var countryName = prompt ('Введите УНП организации');
+var countryName = parseInt(document.getElementById("unp").value);
 var info = getCountryInfo(countryName);
-alert (info);
+document.getElementById("resultunp").innerHTML = info;
 }
 function getCountryInfo(countryName) {
 if ( countryName in organizationsH )
-   return 'УНП: ' + countryName + '\n' + 'Наименование: ' + organizationsH[countryName];
+   return 'УНП: ' + countryName + "<br>" + 'Наименование: ' + organizationsH[countryName];
 else
    return 'нет информации об организации с данным УНП' + '!' ;
 }
@@ -3651,7 +3651,7 @@ addCountry ( '807000028',	'Открытое акционерное общест�
                Количество месяцев
                <input id="c" type="text" placeholder="Введите значение"><br>
                <br>
-               <input type="button" value="Рассчитать" onclick="creditTwo();"><br>
+               <input type="button" value="Рассчитать" onclick="creditTwo();"><br><br>
              </form>
              <div id="result"></div>
          </details>
@@ -3676,7 +3676,7 @@ addCountry ( '807000028',	'Открытое акционерное общест�
                Размер дохода заявителя
                <input id="fk" type="text" placeholder="Введите значение"><br>
                <br>
-               <input type="button" value="Рассчитать" onclick="ratioTwo();"><br>
+               <input type="button" value="Рассчитать" onclick="ratioTwo();"><br><br>
              </form>
              <div id="resultTwo"></div>
          </details>
@@ -3705,7 +3705,7 @@ addCountry ( '807000028',	'Открытое акционерное общест�
                   Процентная ставка
                   <input id="fm" type="text" placeholder="Введите значение"><br>
                   <br>
-                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourTwo();"><br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourTwo();"><br><br>
                 </form>
                 <div id="resultThree"></div>
             </details><br>
@@ -3728,7 +3728,7 @@ addCountry ( '807000028',	'Открытое акционерное общест�
                   Процентная ставка
                   <input id="fms" type="text" placeholder="Введите значение"><br>
                   <br>
-                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourThree();"><br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourThree();"><br><br>
                 </form>
                 <div id="resultFour"></div>
             </details>
@@ -5347,8 +5347,20 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
         Список должностей в разрезе категорий
       </li>
       <li>
-         <a href='javascript:pdl( )'>Список публичных должностных лиц</a>
-       </li>
+         <details>
+            <summary>
+               Список публичных должностных лиц
+            </summary>
+            <form>
+               <br>
+               УНП организации:<br>
+               <input id="unp" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Найти" onclick="pdl();"><br><br>
+             </form>
+             <div id="resultunp"></div>
+         </details>
+      </li>
    </ul>
 </div>
    <div class="fix">

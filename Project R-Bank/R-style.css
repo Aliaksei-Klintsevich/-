@@ -57,17 +57,18 @@ a {
 p, li, table {
    font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1 {
+.main-h-prod {
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 40px;
+  margin-top: 90px;
+  margin-bottom: 60px;
 }
 h2 {
    text-align: center;
+   font-size: 32px;
 }
 .main-h {
   margin-top: 100px;
-  font-size: 32px;
+  font-size: 48px;
   margin-bottom: 80px;
 }
 .table-style { 
@@ -90,6 +91,10 @@ margin: 0 auto;
 margin-top: 15px;
 width: 95%;
 text-align: justify;
+}
+.table-style-contact {
+width: 95%; 
+border-collapse: collapse;   /*Таблица*/
 }
 .table-style-password { 
 border-collapse: collapse;   /*Таблица*/
@@ -144,7 +149,7 @@ font-size: 20px;
  color: #FFFFFF;
 }
 .autor {
- margin-top: 500px;
+ margin-top: 570px;
  margin-left: 800px;
  position: absolute;
  z-index: 1;
@@ -169,6 +174,7 @@ text-align: center;
 border-radius: 20px;
 margin-top: 50px;
 margin-bottom: 60px;
+cursor: pointer;
 }
 .btn-item li:hover {
 background-color: #8B0000;
@@ -176,12 +182,12 @@ background-color: #8B0000;
 .btn-item li a:link {
 text-decoration: none;
 }
-.btn-item > li { 
+/*.btn-item > li { 
 transition: transform 0.5s 
 }
 .btn-item > li:hover { 
 transform: scale(1.2); 
-}
+}*/
 .btn-item li a {
 color: #FFFFFF;
 }
@@ -211,6 +217,14 @@ display: flex;
   list-style: none;
   text-align: center;
   padding: 0;
+}
+.contact {
+display: flex;
+justify-content: space-around;
+}
+input {
+margin-top: 7px;
+margin-bottom: 5px;
 }
 
 .bg {
@@ -270,7 +284,8 @@ flex-direction: column;
 align-items: stretch;
 justify-content: space-evenly;
 overflow: hidden;
-position: relative; 
+position: relative;
+margin-top: 50px; 
 }
 
 div.bg-footer::before, 
@@ -474,7 +489,6 @@ to {
 
       .bg-R {
         background: linear-gradient(132deg, #8B0000, #00008B);
-        animation: Gradient 15s ease infinite;
         position: relative;
         height: 100vh;
         width: 100%;
@@ -484,12 +498,21 @@ to {
       }
       .cube {
         position: absolute;
-        top: 50vh;
-        left: 45vw;
-        transform-origin: top left;
-        transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        animation: cube 15s ease-in forwards infinite;
+        animation-name: rotation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        bottom: 0;
+        z-index: 1;
       }
+      @keyframes rotation {
+        0% {
+            transform:rotate(0deg);
+        }
+        100% {
+            transform:rotate(360deg);
+        }
+    }
 
       /* Animate Background*/
       @keyframes Gradient {
