@@ -62,6 +62,10 @@ p, li, table {
   margin-top: 90px;
   margin-bottom: 60px;
 }
+.main-h-prod-passport {
+  text-align: center;
+  margin-top: 1050px;
+}
 h2 {
    text-align: center;
    font-size: 32px;
@@ -100,8 +104,9 @@ border-collapse: collapse;   /*Таблица*/
 border-collapse: collapse;   /*Таблица*/
 margin: 0 auto;
 margin-top: 15px;
-width: 80%;
+width: 50%;
 font-size: 20px;
+text-align: center;
 }
 .table-style-app { 
   border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
@@ -165,6 +170,9 @@ display: flex;
 justify-content: space-around;
 padding: 0;
 }
+.mm {
+margin-top: 90px;
+}
 .btn-item li {
 padding: 15px;
 background-color: #00008B;
@@ -226,7 +234,10 @@ input {
 margin-top: 7px;
 margin-bottom: 5px;
 }
-
+.search {
+margin-top: 10px;
+margin-bottom: 10px;
+}
 .bg {
   background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
   background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
@@ -665,6 +676,3 @@ to {
         width:100%;
         transition:800ms ease all;
       }
-
-
-      

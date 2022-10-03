@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="USD">Доллар США $ — 00,0000 руб.</div>
+    <div id="EUR">Евро € — 00,0000 руб.</div>
+    POST /services/exrates.asmx HTTP/1.1
+Host: www.nbrb.by
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "https://www.nbrb.by/CurrenciesRef"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CurrenciesRef xmlns="https://www.nbrb.by/">
+      <Periodicity>int</Periodicity>
+    </CurrenciesRef>
+  </soap:Body>
+</soap:Envelope>
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CurrenciesRefResponse xmlns="https://www.nbrb.by/">
+      <CurrenciesRefResult>
+        <xsd:schema>schema</xsd:schema>xml</CurrenciesRefResult>
+    </CurrenciesRefResponse>
+  </soap:Body>
+</soap:Envelope>
+    </body>
+</html>
