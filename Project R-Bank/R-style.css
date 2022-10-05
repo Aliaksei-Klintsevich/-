@@ -47,6 +47,15 @@ a {
 .logo-svg-color {
   fill: #00008B;
 }
+.values {
+  list-style: none;
+  padding: 0;
+}
+.table-values {
+  font: normal 12px arial;
+  width: 100%;
+  text-align: center;
+}
 .main-li {
   margin-bottom: 10px;
 }
