@@ -55,6 +55,12 @@ a {
   font: normal 12px arial;
   width: 100%;
   text-align: center;
+  background-color: white;
+  border-collapse: collapse;
+}
+table a:visited {
+  color: #14509C;
+  font-weight: bold; 
 }
 .main-li {
   margin-bottom: 10px;
