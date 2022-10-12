@@ -1,24 +1,775 @@
-<select class="js-select2" name="city" placeholder="Выберите город">
-    <option value=""></option>
-    <option value="367">Абаза</option>
-    <option value="340">Абакан</option>    
-    <option value="369">Абдулино</option>    
-    <option value="370">Абинск</option>    
-    <option value="371">Агидель</option>    
-    ...
-</select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
 
-<link rel="stylesheet" href="/select2/dist/css/select2.min.css">
-<script src="/jquery.min.js"></script>
-<script src="/select2/dist/js/select2.min.js"></script>
-<script src="/select2/dist/js/i18n/ru.js"></script>
+.content{
+	margin: 0 auto;
+	max-width: 90%;
+	width: 720px;
+}
+main{
+	padding: 1% 0;
+	position: relative;
+	background: #f5f5f5;
+	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+		height: 100%;
+}
+.zoom{
+	overflow: hidden;
+	padding-bottom: 55%;
+}
+.zoom img{
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	max-width: 200%;
+	width: 100%;
+	transform: translateX(-50%);
+	/* Thanks  @bastian_fiessinger. Use when activating blur effect:
+	will-change: -webkit-filter, filter, transform; */
+}
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+p, ul {
+   margin: 0;
+}
+a {
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+.header-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.header {
+  background-color: #ffff;
+  padding: 35px;
+  border-bottom: solid 1px #c4c4c4;
+}
+.header-text-page-1 {
+ font-weight: bold;
+ color: #00008B;
+}
+.header-text-page-2 {
+ font-weight: bold;
+ color: #8B0000;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.logo-text-top {
+  font-size: 97px;
+  font-family: fantasy;
+  color: #00008B;
+  margin-top: 20px;
+}
+.logo-text-bottom {
+  font-size: 97px;
+  font-family: fantasy;
+  color: #8B0000;
+}
+.logo-svg-color {
+  fill: #00008B;
+}
+.values {
+  list-style: none;
+  padding: 0;
+}
+.table-values {
+  font: normal 12px arial;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-collapse: collapse;
+}
+table a:visited {
+  color: #14509C;
+  font-weight: bold; 
+}
+.main-li {
+  margin-bottom: 10px;
+}
+.term {
+   font-weight: bold;   /*Терминология*/
+   font-size: 16px;
+}
+p, li, table {
+   font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-h-prod {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+.main-h-prod-passport {
+  text-align: center;
+  margin-top: 1050px;
+}
+h2 {
+   text-align: center;
+   font-size: 32px;
+}
+.main-h {
+  margin-top: 100px;
+  font-size: 48px;
+  margin-bottom: 80px;
+}
+.table-style { 
+   border-collapse: collapse;   /*Таблица*/
+   margin: 0 auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   width: 50%;
+}
+.table-style-product { 
+  border-collapse: collapse;   /*Таблица*/
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 50%;
+  color: #FFFFFF;
+}
+.table-style-product-r { 
+border-collapse: collapse;   /*Таблица*/
+margin: 0 auto;
+margin-top: 15px;
+width: 95%;
+text-align: justify;
+}
+.table-style-contact {
+width: 95%; 
+border-collapse: collapse;   /*Таблица*/
+}
+.table-style-password { 
+border-collapse: collapse;   /*Таблица*/
+margin: 0 auto;
+margin-top: 15px;
+width: 50%;
+font-size: 20px;
+text-align: center;
+}
+.table-style-app { 
+  border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+.text-i {
+   font-style: italic;
+}
+.text-underline {
+   text-decoration: underline;   /*Подчеркнутый текст*/
+}
+.app-table {
+  text-align: right;
+  margin-top: 150px;
+}
+.table-header {
+  font-weight: bold;   /*Заголовок таблицы*/
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.footer-td {
+ display: flex;
+ justify-content: space-around;
+ margin-top: 30px;
+}
+.footer-main {
+ font-weight: bold;
+ font-size: 24px;
+ margin-bottom: 20px;
+ text-align: center;
+ color: #FFFFFF;
+}
+.footer-list {
+ list-style: none;
+ text-align: center;
+ color: #FFFFFF;
+}
+.footer-box {
+ width: 33%;
+}
+.footer-list-a {
+ color: #FFFFFF;
+}
+.autor {
+ margin-top: 570px;
+ margin-left: 800px;
+ position: absolute;
+ z-index: 1;
+ font-weight: bold;
+ font-family: sans-serif;
+ padding: 3px;
+}
+a.footer-list-a:hover {
+ color: #005f8b;
+}
+.btn-item {
+display: flex;
+justify-content: space-around;
+padding: 0;
+}
+.mm {
+margin-top: 90px;
+}
+.btn-item li {
+padding: 15px;
+background-color: #00008B;
+color: #FFFFFF;
+width: 240px;
+text-align: center;
+border-radius: 20px;
+margin-top: 50px;
+margin-bottom: 60px;
+cursor: pointer;
+}
+.btn-item li:hover {
+background-color: #8B0000;
+}
+.btn-item li a:link {
+text-decoration: none;
+}
+/*.btn-item > li { 
+transition: transform 0.5s 
+}
+.btn-item > li:hover { 
+transform: scale(1.2); 
+}*/
+.btn-item li a {
+color: #FFFFFF;
+}
+.maxAmout:hover {
+color: #00008B;
+}
+.fix {
+color: #FFFFFF;
+text-align:center;
+position:fixed;
+right:10px;
+border: 2px solid black;
+bottom: 10px;
+}
+.fix:hover {
+background-color: #00008B;
+}
+.fix-href:hover {
+color: #FFFFFF;
+}
+.fix-href {
+font-size: 40px;
+}
+.menu {
+display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.contact {
+display: flex;
+justify-content: space-around;
+}
+input {
+margin-top: 7px;
+margin-bottom: 5px;
+}
+.search {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.bg {
+  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
+  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+-moz-animation: Gradient 10s ease infinite;
+animation: Gradient 15s ease infinite;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: space-evenly;
+overflow: hidden;
+position: relative;
+ height: 700px; 
+}
 
-<script>
-$(document).ready(function() {
-    $('.js-select2').select2({
-        placeholder: "Выберите город",
-        maximumSelectionLength: 2,
-        language: "ru"
-    });
-});
-</script>
+div.bg::before, 
+div.bg::after {
+content: "";
+width: 70vmax;
+height: 70vmax;
+position: absolute;
+background: rgba(255, 255, 255, 0.07);
+left: -20vmin;
+top: -20vmin;
+animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+z-index: 1;
+will-change: border-radius, transform;
+transform-origin: 30% 30%;
+pointer-events: none; 
+}
+
+div.bg::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  transform-origin: 10% 10%; 
+}
+
+.bg-footer {
+ background: -moz-linear-gradient(45deg, #00008B 0%, #8B0000 29%, #00008B 66%, #8B0000 100%);
+ background: -webkit-linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+ background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
+ background-size: 400% 400%;
+ -webkit-animation: Gradient 10s ease infinite;
+-moz-animation: Gradient 10s ease infinite;
+animation: Gradient 10s ease infinite;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: space-evenly;
+overflow: hidden;
+position: relative;
+margin-top: 50px; 
+}
+
+div.bg-footer::before, 
+div.bg-footer::after {
+content: "";
+width: 70vmax;
+height: 70vmax;
+position: absolute;
+background: rgba(255, 255, 255, 0.07);
+left: -20vmin;
+top: -20vmin;
+animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+z-index: 1;
+will-change: border-radius, transform;
+transform-origin: 30% 30%;
+pointer-events: none; 
+}
+
+div.bg-footer::after {
+ width: 70vmin;
+ height: 70vmin;
+ left: auto;
+ right: -10vmin;
+ top: auto;
+ bottom: 0;
+ animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+ transform-origin: 10% 10%; 
+}
+
+@-webkit-keyframes Gradient {
+0% {
+  background-position: 0 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0 50%
+}
+}
+
+@-moz-keyframes Gradient {
+0% {
+  background-position: 0 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0 50%
+}
+}
+
+@keyframes Gradient {
+0% {
+  background-position: 0 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0 50%
+}
+}
+
+@keyframes morph {
+0% {
+  border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+100% {
+  border-radius: 40% 60%; } 
+}
+
+@keyframes spin {
+to {
+  transform: rotate(1turn); 
+} 
+}
+.st0{display:none;}
+.st1{display:inline;}
+.st2{opacity:0.29;}
+.st3{fill:#FFFFFF;}
+.st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+.st5{clip-path:url(#SVGID_4_);}
+.st6{clip-path:url(#SVGID_6_);}
+.st7{clip-path:url(#SVGID_8_);}
+.st8{clip-path:url(#SVGID_10_);}
+.st9{fill:none;}
+.st10{clip-path:url(#SVGID_12_);}
+.st11{opacity:0.7;}
+.st12{clip-path:url(#SVGID_14_);}
+.st13{opacity:0.2;}
+.st14{clip-path:url(#SVGID_16_);}
+.st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+
+
+
+ .footer-waves {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%);
+    color:white;
+  }
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+
+
+/*Актуальная линейка кредитных продуктов */
+
+      /* радиокнопки скрыты */
+      input.SRadioFolder
+      {
+          display: none;
+      }
+  
+      /* но их метки видны и выстраиваются в линейку */
+      input.SRadioFolder + label
+      {
+          float: left;
+          background-color: #8B0000;
+          display: block;
+          margin-right: 4px;
+          padding: 0 10px 0 10px;
+          border-radius: 10px 10px 0 0;
+          line-height: 2em;
+          color: #FFFFFF;
+      }
+  
+      /* самая первая метка - с отступом слева */
+      input.SRadioFolder:first-child + label
+      {
+          margin-left: 10px;
+      }
+  
+      /* метка выбранной радиокнопки - голубой фон */
+      input.SRadioFolder:checked + label
+      {
+          background-color: #00008B;
+          color: #FFFFFF;
+      }
+  
+      /* все контенты обычно не видны */
+      input.SRadioFolder + label + div
+      {
+          display: none;
+      }
+  
+      /* контент выбранной радиокнопки виден */
+      input.SRadioFolder:checked + label + div
+      {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 2em;
+          width: 100%;
+          height: 865px;
+          background-color: #00008B;
+          border-radius: 10px;
+          color: #FFFFFF;
+      }
+
+
+
+
+
+
+
+      .bg-R {
+        background: linear-gradient(132deg, #8B0000, #00008B);
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        padding:0;
+        margin:0px;
+      }
+      .cube {
+        position: absolute;
+        animation-name: rotation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        bottom: 0;
+        z-index: 1;
+      }
+      @keyframes rotation {
+        0% {
+            transform:rotate(0deg);
+        }
+        100% {
+            transform:rotate(360deg);
+        }
+    }
+
+      /* Animate Background*/
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes cube {
+        from {
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          opacity: 0.3;
+        }
+        to {
+          transform: scale(20) rotate(960deg) translate(-50%, -50%);
+          opacity: 0.3;
+        }
+      }
+
+
+
+
+
+      .card{
+        margin-bottom: 50px;
+        margin-left: 450px;
+        margin-top: 1000px;
+        cursor:pointer;
+        position:relative;
+        width:1000px;
+        height:600px;
+        background:#fff;
+        transform-style:preserve-3d;
+        transform-prespective:2000px;
+        transition:1s;
+        box-shadow:inset 300px 0 50px rgba(0,0,0,0.15), 0 20px 20px rgba(0,0,0,0.15);
+      }
+      .h-pass {
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        color: darkblue;
+        text-align: center;
+        font-size: 26px;
+        font-family: cursive;
+      }
+      .card:hover{
+        transform:perspective(2500px) translateX(0%);
+          box-shadow:inset 20px 0 50px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
+      }
+      .card .cover{
+        position:relative;
+        width:100%;
+        height:100%;
+        background:#fff;
+        z-index:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+         transform-style:preserve-3d;
+        overflow:hidden;
+        transition:1s ease-in-out;
+        transform-origin:left;
+      }
+      .card:hover .cover{
+        transform:rotateY(-180deg);
+      }
+      .card .cover::before{
+        position:absolute;
+        content:"";
+        width:560px;
+        height:160%;
+        background:#fff;
+        transform:rotate(90deg);
+        box-shadow:0 0 0 18px #8B0000;
+        transition:0.5s;
+        transition-delay:1s;
+      }
+      .card:hover .cover::before{
+        width:0;
+        box-shadow:0 0 0 250px #00008B;
+          transition:0.5s;
+        transform:rotate(143.5deg);
+      }
+      .card .details{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        text-align:center;
+      }
+      .cover-password {
+        z-index: 1;
+      }
+
+
+      .custom-btn {
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+      }
+      /* Разделы (ссылки) меню */
+      .btn-menu {
+        color: #00008B;
+        border: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .btn-menu:hover {
+        color: #8B0000;
+        background: transparent;
+         box-shadow:none;
+      }
+      .btn-menu:before,
+      .btn-menu:after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: #8B0000;
+        box-shadow:
+         -1px -1px 5px 0px #fff,
+         7px 7px 20px 0px #0003,
+         4px 4px 5px 0px #0002;
+        transition:400ms ease all;
+      }
+      .btn-menu:after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+      }
+      .btn-menu:hover:before,
+      .btn-menu:hover:after{
+        width:100%;
+        transition:800ms ease all;
+      }
+    </style>
+</head>
+<body>
+    <main role="main">
+        <header class="header" id="UP">
+            <ul class="header-list">
+               <li>
+                  <a href="https://rbank.by/" target="_blank">Официальный сайт <span style="font-weight:bold">ЗАО</span> «<span class="header-text-page-1">Банк</span> «<span class="header-text-page-2">Решение</span>»</a>
+               </li>
+               <li>
+                  <a href="#contact">Контактная информация</a>
+               </li>
+            </ul>
+         </header>
+         <div class="bg">
+         <div class="logo">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="213.000000pt" height="217.000000pt" viewBox="0 0 213.000000 217.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,217.000000) scale(0.100000,-0.100000)"
+           fill="#8B0000" stroke="none">
+           <path class="logo-svg-color" d="M757 1862 c-163 -163 -297 -299 -297 -302 0 -3 67 -4 148 -2 l149 3
+           149 150 148 150 383 -383 c211 -211 382 -386 381 -390 -5 -13 -757 -768 -765
+           -768 -5 0 -76 68 -158 150 l-150 150 -147 0 -148 0 303 -299 302 -300 535 535
+           535 534 -535 535 -535 535 -298 -298z"/>
+           <path d="M30 1320 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           <path d="M30 860 l0 -110 640 0 640 0 0 110 0 110 -640 0 -640 0 0 -110z"/>
+           </g>
+           </svg>
+           <div>
+         <p class="logo-text-top">
+            ОТДЕЛ КРЕДИТНОЙ ЭКСПЕРТИЗЫ
+         </p>
+         <p class="logo-text-bottom">
+            ФИЗИЧЕСКИХ ЛИЦ
+         </p>
+            </div>
+      </div>
+      </div>
+    </main>
+        <div class="content">  
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <p>Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>		
+        </div>
+    </main>
+</body>
+</html>
