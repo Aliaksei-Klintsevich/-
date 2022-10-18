@@ -134,6 +134,8 @@ text-align: center;
 .oked {
   list-style: none;
   font-size: 20px;
+  overflow: scroll;
+  height: 850px;
 }
 .text-i {
    font-style: italic;
