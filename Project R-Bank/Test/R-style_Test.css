@@ -132,10 +132,13 @@ text-align: center;
   font-size: 14px;
 }
 .oked {
-  list-style: none;
   font-size: 20px;
   overflow: scroll;
   height: 850px;
+}
+.oked li{
+  list-style: none;
+  cursor: pointer;
 }
 .text-i {
    font-style: italic;
