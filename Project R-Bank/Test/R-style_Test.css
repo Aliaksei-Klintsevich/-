@@ -133,7 +133,7 @@ text-align: center;
 }
 .oked {
   font-size: 20px;
-  overflow: scroll;
+  overflow-y: scroll;
   height: 850px;
 }
 .oked li{
