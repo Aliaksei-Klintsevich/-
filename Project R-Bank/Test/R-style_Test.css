@@ -132,10 +132,10 @@ text-align: center;
   font-size: 14px;
 }
 .oked {
-  font-size: 20px;
+  font-size: 22px;
   overflow-y: scroll;
   height: 850px;
-  width: 75%;
+  width: 70%;
 }
 .oked li{
   list-style: none;
