@@ -141,6 +141,23 @@ text-align: center;
   list-style: none;
   cursor: pointer;
 }
+.oked-list {
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  width: 25%;
+  font-size: 20px;
+}
+.oked-list-li {
+  position: absolute;
+  right: 10px;
+  top: 200px;
+  width: 25%;
+  font-size: 20px;
+  opacity: 0.1;
+  list-style: none;
+  text-align: center;
+}
 .text-i {
    font-style: italic;
 }
@@ -911,3 +928,9 @@ to {
         transform: rotate(45deg) scale(1.1);    
         color: #FFF;
     }
+
+
+
+
+
+
