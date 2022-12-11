@@ -929,6 +929,17 @@ to {
         color: #FFF;
     }
 
+    .sfera-r {
+      position: absolute;
+      right: 50px;
+      top: 220px;
+      opacity: 0;
+      width: 460px;
+      text-align: center;
+   }
+   .sfera:hover + .sfera-r {
+       opacity: 1;
+   }
 
 
 
