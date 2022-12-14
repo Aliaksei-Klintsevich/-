@@ -116,11 +116,11 @@ text-align: justify;
 width: 95%; 
 border-collapse: collapse;   /*Таблица*/
 }
-.table-style-password { 
+.table-style-passport { 
 border-collapse: collapse;   /*Таблица*/
 margin: 0 auto;
 margin-top: 15px;
-width: 50%;
+width: 75%;
 font-size: 20px;
 text-align: center;
 }
