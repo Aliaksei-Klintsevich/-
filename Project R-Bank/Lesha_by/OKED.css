@@ -1,6 +1,14 @@
 body {
     background-color: #24282c;
 }
+a {
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+.menu-nav a {
+  color: #FFFFFF;
+}
 .sfera-r {
     position: absolute;
     right: 50px;
