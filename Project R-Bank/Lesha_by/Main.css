@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 body {
   background-color: #fafafa;
   margin: 0;
@@ -19,14 +20,16 @@ a {
   margin-top: 40px;
 }
 .logo-text-top {
-  font-size: 97px;
-  font-family: fantasy;
+  font-size: 78px;
+  font-family: 'Ubuntu';
+  font-style: italic;
   color: #00008B;
-  margin-top: 20px;
+  margin-top: 44px;
 }
 .logo-text-bottom {
-  font-size: 97px;
-  font-family: fantasy;
+  font-size: 78px;
+  font-family: 'Ubuntu';
+  font-style: italic;
   color: #8B0000;
 }
 .logo-svg-color {
@@ -270,7 +273,7 @@ align-items: stretch;
 justify-content: space-evenly;
 overflow: hidden;
 position: relative;
- height: 700px; 
+ height: 650px; 
 }
 
 div.bg::before, 
@@ -543,6 +546,59 @@ div.bg::after {
       }
 
 
+
+      @media screen and (max-width:1670px)
+{
+  .logo-text-top {
+    font-size: 70px;
+    margin-top: 55px;
+  }
+  .logo-text-bottom {
+    font-size: 70px;
+  }
+  .bg {
+    height: 630px;
+  }
+}
+@media screen and (max-width:1530px)
+{
+  .logo-text-top {
+    font-size: 60px;
+    margin-top: 67px;
+  }
+  .logo-text-bottom {
+    font-size: 60px;
+  }
+  .bg {
+    height: 600px;
+  }
+}
+@media screen and (max-width:1360px)
+{
+  .logo-text-top {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+  .logo-text-bottom {
+    font-size: 50px;
+  }
+  .bg {
+    height: 560px;
+  }
+}
+@media screen and (max-width:1200px)
+{
+  .logo-text-top {
+    font-size: 45px;
+    margin-top: 87px;
+  }
+  .logo-text-bottom {
+    font-size: 45px;
+  }
+  .bg {
+    height: 530px;
+  }
+}
 
 
 
