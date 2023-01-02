@@ -19,6 +19,12 @@ a {
   justify-content: center;
   margin-top: 40px;
 }
+.logo-adapt {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  display: none;
+}
 .logo-text-top {
   font-size: 78px;
   font-family: 'Ubuntu';
@@ -250,6 +256,15 @@ display: flex;
 .contact {
 display: flex;
 justify-content: space-around;
+}
+.map-main {
+  position: relative;
+  overflow: hidden;
+}
+.map-adapt {
+  position: relative;
+  overflow: hidden;
+  display: none;
 }
 input {
 margin-top: 7px;
@@ -546,8 +561,24 @@ div.bg::after {
       }
 
 
-
-      @media screen and (max-width:1670px)
+@media screen and (max-width:1790px)
+{
+.map-main {
+  display: none;
+}
+.map-adapt {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+input.SRadioFolder:checked + label + div {
+  height: 960px;
+}
+.main-h-prod-passport {
+  margin-top: 1100px;
+}
+}
+@media screen and (max-width:1670px)
 {
   .logo-text-top {
     font-size: 70px;
@@ -559,6 +590,32 @@ div.bg::after {
   .bg {
     height: 630px;
   }
+input.SRadioFolder:checked + label + div {
+  height: 1000px;
+}
+.main-h-prod-passport {
+  margin-top: 1140px;
+}
+}
+@media screen and (max-width:1580px)
+{
+.contact {
+  flex-direction: column;
+}
+.map-adapt {
+display: none;
+}
+.map-main {
+  display: flex;
+  margin: 0 auto;
+}
+.table-contact-adapt {
+  margin-top: 40px;
+}
+.table-style-contact {
+  width: 900px;
+  margin: 0 auto;
+}
 }
 @media screen and (max-width:1530px)
 {
@@ -597,6 +654,27 @@ div.bg::after {
   }
   .bg {
     height: 530px;
+  }
+}
+@media screen and (max-width:1100px)
+{
+  .logo-text-top {
+    font-size: 40px;
+    margin-top: 57px;
+  }
+  .logo-text-bottom {
+    font-size: 40px;
+  }
+  .bg {
+    height: 480px;
+  }
+  .logo-adapt {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-main {
+    display: none;
   }
 }
 
