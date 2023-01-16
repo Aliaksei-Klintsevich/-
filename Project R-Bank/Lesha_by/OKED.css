@@ -123,6 +123,41 @@ a {
   }
 
 
+
+
+  @media screen and (max-width:1800px)
+{
+  .sfera-r {
+    right: 0px;
+    width: 450px;
+}
+}
+@media screen and (max-width:1630px)
+{
+  .sfera-r {
+    right: 0px;
+    width: 440px;
+    top: 240px;
+}
+}
+@media screen and (max-width:1590px)
+{
+  .sfera-r {
+    right: 0px;
+    width: 400px;
+    top: 240px;
+}
+}
+@media screen and (max-width:1490px)
+{
+  .sfera-r {
+    right: 0px;
+    width: 380px;
+    top: 240px;
+}
+}
+
+
   
   
   
