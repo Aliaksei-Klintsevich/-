@@ -42,11 +42,6 @@ a {
 .logo-svg-color {
   fill: #00008B;
 }
-.bg-main {
-  height: 651px;
-  margin-top: -651px;
-  overflow: hidden;
-}
 .values {
   list-style: none;
   padding: 0;
@@ -280,23 +275,6 @@ margin-bottom: 5px;
 margin-top: 10px;
 margin-bottom: 10px;
 }
-.bg-two {
-  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
-  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
-  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 10s ease infinite;
--moz-animation: Gradient 10s ease infinite;
-animation: Gradient 15s ease infinite;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-justify-content: space-evenly;
-overflow: hidden;
-position: relative;
- height: 650px; 
- z-index: 2;
-}
 .bg {
   background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
   background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
@@ -312,7 +290,6 @@ justify-content: space-evenly;
 overflow: hidden;
 position: relative;
  height: 650px; 
- z-index: 2;
 }
 
 div.bg::before, 
@@ -611,7 +588,7 @@ input.SRadioFolder:checked + label + div {
   .logo-text-bottom {
     font-size: 70px;
   }
-  .bg-main {
+  .bg {
     height: 630px;
   }
 input.SRadioFolder:checked + label + div {
@@ -650,7 +627,7 @@ display: none;
   .logo-text-bottom {
     font-size: 60px;
   }
-  .bg-main {
+  .bg {
     height: 600px;
   }
 }
@@ -663,7 +640,7 @@ display: none;
   .logo-text-bottom {
     font-size: 50px;
   }
-  .bg-main {
+  .bg {
     height: 560px;
   }
 }
@@ -676,7 +653,7 @@ display: none;
   .logo-text-bottom {
     font-size: 45px;
   }
-  .bg-main {
+  .bg {
     height: 530px;
   }
 }
@@ -689,7 +666,7 @@ display: none;
   .logo-text-bottom {
     font-size: 40px;
   }
-  .bg-main {
+  .bg {
     height: 480px;
   }
   .logo-adapt {
