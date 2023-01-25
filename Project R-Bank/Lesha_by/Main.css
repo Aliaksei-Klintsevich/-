@@ -280,6 +280,20 @@ margin-bottom: 5px;
 margin-top: 10px;
 margin-bottom: 10px;
 }
+.bg {
+  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
+  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
+  background-size: 400% 400%;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: space-evenly;
+overflow: hidden;
+position: relative;
+ height: 650px; 
+ z-index: 2;
+}
 .bg-two {
   background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
   background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
@@ -297,24 +311,6 @@ position: relative;
  height: 650px; 
  z-index: 2;
 }
-.bg {
-  background: -moz-linear-gradient(45deg, #00008B 0%, #FFFFFF 65%, #00008B 50%, #8B0000 70%);
-  background: -webkit-linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
-  background: linear-gradient(45deg, #00008B 0%,#FFFFFF 65%,#00008B 50%,#8B0000 70%);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 10s ease infinite;
--moz-animation: Gradient 10s ease infinite;
-animation: Gradient 15s ease infinite;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-justify-content: space-evenly;
-overflow: hidden;
-position: relative;
- height: 650px; 
- z-index: 2;
-}
-
 div.bg::before, 
 div.bg::after {
 content: "";
@@ -611,8 +607,12 @@ input.SRadioFolder:checked + label + div {
   .logo-text-bottom {
     font-size: 70px;
   }
+  .bg {
+    height: 630px;
+  }
   .bg-main {
     height: 630px;
+    margin-top: -630px;
   }
 input.SRadioFolder:checked + label + div {
   height: 1000px;
@@ -650,8 +650,12 @@ display: none;
   .logo-text-bottom {
     font-size: 60px;
   }
+  .bg {
+    height: 600px;
+  }
   .bg-main {
     height: 600px;
+    margin-top: -600px;
   }
 }
 @media screen and (max-width:1360px)
@@ -663,8 +667,12 @@ display: none;
   .logo-text-bottom {
     font-size: 50px;
   }
+  .bg {
+    height: 560px;
+  }
   .bg-main {
     height: 560px;
+    margin-top: -560px;
   }
 }
 @media screen and (max-width:1200px)
@@ -676,8 +684,12 @@ display: none;
   .logo-text-bottom {
     font-size: 45px;
   }
+  .bg {
+    height: 530px;
+  }
   .bg-main {
     height: 530px;
+    margin-top: -530px;
   }
 }
 @media screen and (max-width:1100px)
@@ -690,6 +702,10 @@ display: none;
     font-size: 40px;
   }
   .bg-main {
+    height: 480px;
+    margin-top: -480px;
+  }
+  .bg {
     height: 480px;
   }
   .logo-adapt {
