@@ -26,6 +26,24 @@ a {
   margin-top: 40px;
   display: none;
 }
+.logo-adapt-two {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  display: none;
+}
+.logo-adapt-three {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  display: none;
+}
+.logo-adapt-four {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  display: none;
+}
 .logo-text-top {
   font-size: 78px;
   font-family: 'Ubuntu';
@@ -199,12 +217,20 @@ a.footer-list-a:hover {
  color: #005f8b;
 }
 .btn-item {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+.btn-item-adapt {
 display: flex;
-justify-content: space-around;
+flex-direction: column;
 padding: 0;
 }
 .mm {
 margin-top: 90px;
+}
+.btn-adapt {
+  display: none;
 }
 .btn-item li {
 padding: 15px;
@@ -232,6 +258,32 @@ transform: scale(1.2);
 .btn-item li a {
 color: #FFFFFF;
 }
+.btn-item-adapt li {
+  padding: 15px;
+  background-color: #00008B;
+  color: #FFFFFF;
+  width: 240px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  }
+  .btn-item-adapt li:hover {
+  background-color: #8B0000;
+  }
+  .btn-item-adapt li a:link {
+  text-decoration: none;
+  }
+  /*.btn-item > li { 
+  transition: transform 0.5s 
+  }
+  .btn-item > li:hover { 
+  transform: scale(1.2); 
+  }*/
+  .btn-item-adapt li a {
+  color: #FFFFFF;
+  }
 .maxAmout:hover {
 color: #00008B;
 }
@@ -715,6 +767,193 @@ display: none;
   }
   .logo-main {
     display: none;
+  }
+}
+@media screen and (max-width:960px)
+{
+  .logo-text-top {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+  .logo-text-bottom {
+    font-size: 35px;
+  }
+  .bg-main {
+    height: 440px;
+    margin-top: -440px;
+  }
+  .bg {
+    height: 420px;
+  }
+  .logo-adapt-two {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-adapt {
+    display: none;
+  }
+  .logo-main {
+    display: none;
+  }
+}
+@media screen and (max-width:830px)
+{
+  .logo-text-top {
+    font-size: 30px;
+    margin-top: 42px;
+  }
+  .logo-text-bottom {
+    font-size: 30px;
+  }
+  .bg-main {
+    height: 400px;
+    margin-top: -400px;
+  }
+  .bg {
+    height: 380px;
+  }
+  .logo-adapt-three {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-adapt-two {
+    display: none;
+  }
+  .logo-adapt {
+    display: none;
+  }
+  .logo-main {
+    display: none;
+  }
+}
+@media screen and (max-width:720px)
+{
+  .logo-text-top {
+    font-size: 25px;
+    margin-top: 36px;
+  }
+  .logo-text-bottom {
+    font-size: 25px;
+  }
+  .bg-main {
+    height: 360px;
+    margin-top: -360px;
+  }
+  .bg {
+    height: 340px;
+  }
+  .logo-adapt-four {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-adapt-three {
+    display: none;
+  }
+  .logo-adapt-two {
+    display: none;
+  }
+  .logo-adapt {
+    display: none;
+  }
+  .logo-main {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .btn-adapt {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .btn-item-adapt {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-item-adapt li {
+    margin-top: -10px;
+  }
+  .table-values {
+    margin-bottom: 60px;
+  }
+  .main-h-prod {
+    margin-top: -60px;
+  }
+}
+@media screen and (max-width:600px)
+{
+  .logo-text-top {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .logo-text-bottom {
+    font-size: 20px;
+  }
+  .bg-main {
+    height: 320px;
+    margin-top: -320px;
+  }
+  .bg {
+    height: 300px;
+  }
+  .logo-adapt-four {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-adapt-three {
+    display: none;
+  }
+  .logo-adapt-two {
+    display: none;
+  }
+  .logo-adapt {
+    display: none;
+  }
+  .logo-main {
+    display: none;
+  }
+}
+@media screen and (max-width:495px)
+{
+  .logo-text-top {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .logo-text-bottom {
+    font-size: 20px;
+  }
+  .bg-main {
+    height: 320px;
+    margin-top: -320px;
+  }
+  .bg {
+    height: 300px;
+  }
+  .logo-adapt-four {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .logo-adapt-three {
+    display: none;
+  }
+  .logo-adapt-two {
+    display: none;
+  }
+  .logo-adapt {
+    display: none;
+  }
+  .logo-main {
+    display: none;
+  }
+  .table-values-adapt {
+    width: 160px;
   }
 }
 

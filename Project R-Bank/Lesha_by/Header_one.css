@@ -6,8 +6,20 @@
   }
   .header {
     background-color: #ffff;
-    padding: 35px;
+    padding: 25px;
     border-bottom: solid 1px #c4c4c4;
+  }
+  .header-site {
+    padding: 10px;
+  }
+  .header-contact {
+    padding: 10px;
+  }
+  .header-adapt-site {
+    display: none;
+  }
+  .header-adapt-contact {
+    display: none;
   }
   .header-text-page-1 {
     font-weight: bold;
@@ -157,6 +169,7 @@ transform: rotate(1turn);
     background: linear-gradient(45deg, #00008B 0%,#8B0000 29%,#00008B 66%,#8B0000 100%);
     cursor: pointer; 
     border: 2px solid #BFE2FF;
+    padding: 10px;
 }
 .side-button-1 .side-b:hover,
 .side-button-1 .side-b:active,
@@ -218,4 +231,106 @@ transform: rotate(1turn);
 .side-button-2:hover {
     transform: rotate(45deg) scale(1.1);    
     color: #FFF;
+}
+
+
+
+@media screen and (max-width:1040px)
+{
+  .header-adapt-site {
+    display: block;
+  }
+  .header-adapt-contact {
+    display: block;
+  }
+  .header-site {
+    display: none;
+  }
+  .header-contact {
+    display: none;
+  }
+  .header {
+    padding: 25px;
+  }
+}
+@media screen and (max-width:760px)
+{
+  .header-adapt-site {
+    display: block;
+  }
+  .header-adapt-contact {
+    display: block;
+  }
+  .header-site {
+    display: none;
+  }
+  .header-contact {
+    display: none;
+  }
+  .header {
+    padding: 25px;
+  }
+  .header-font-site {
+    font-size: 16px;
+  }
+  .header-font-contact {
+    font-size: 16px;
+  }
+  .side-button-1 .side-b {
+    padding: 7px;
+  }
+}
+@media screen and (max-width:640px)
+{
+  .header-adapt-site {
+    display: block;
+  }
+  .header-adapt-contact {
+    display: block;
+  }
+  .header-site {
+    display: none;
+  }
+  .header-contact {
+    display: none;
+  }
+  .header {
+    padding: 25px;
+  }
+  .header-font-site {
+    font-size: 14px;
+  }
+  .header-font-contact {
+    font-size: 14px;
+  }
+  .side-button-1 .side-b {
+    padding: 7px;
+  }
+}
+@media screen and (max-width:520px)
+{
+  .header-adapt-site {
+    display: block;
+  }
+  .header-adapt-contact {
+    display: block;
+  }
+  .header-site {
+    display: none;
+  }
+  .header-contact {
+    display: none;
+  }
+  .header {
+    padding: 25px;
+  }
+  .header-font-site {
+    font-size: 11px;
+  }
+  .header-font-contact {
+    font-size: 11px;
+  }
+  .side-button-1 .side-b {
+    padding: 7px;
+  }
 }
