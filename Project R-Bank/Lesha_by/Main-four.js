@@ -12,9 +12,31 @@ function creditTwo() {
    var percentages = parseFloat (a) * parseFloat (b) * 30 / 360 / 100; //Расчет суммы процентов годовых
    var calculation = principalDebt + percentages; //Основной долг + проценты
    
-
    document.getElementById("result").innerHTML = monthlyPayment + ' ' + ( calculation.toFixed(2) );
  }
+
+
+// Адаптив
+
+
+function creditTwoAdapt() {
+   var monthlyPayment = 'Ежемесячный платеж:';
+   var a = parseFloat(document.getElementById("a-two").value);
+   var b = parseFloat(document.getElementById("b-two").value);
+   var c = parseFloat(document.getElementById("c-two").value);
+
+   if (isNaN(a) == true) a = 0;
+   if (isNaN(b) == true) b = 0;
+   if (isNaN(c) == true) c = 0;
+
+   var principalDebt = parseFloat (a) / parseFloat (c); // Расчет суммы основного долга
+   var percentages = parseFloat (a) * parseFloat (b) * 30 / 360 / 100; //Расчет суммы процентов годовых
+   var calculation = principalDebt + percentages; //Основной долг + проценты
+   
+   document.getElementById("resultAdapt").innerHTML = monthlyPayment + ' ' + ( calculation.toFixed(2) );
+ }
+
+
 
  function Spoiler() {
     var ele = document.getElementById("contentSpoiler");
@@ -64,9 +86,37 @@ function creditTwo() {
   var allRashody = parseFloat (dk) + parseFloat (ek);
   var koeff = (allRashody + calculation) / fk;
 
-
   document.getElementById("resultTwo").innerHTML = monthlyPayment + ' ' + ( koeff.toFixed(2) );
 }
+
+
+// Адаптив
+
+
+function ratioTwoAdapt() {
+   var monthlyPayment = 'Коэффициент кредитоспособности:';
+   var ak = parseFloat(document.getElementById("ak-two").value);
+   var bk = parseFloat(document.getElementById("bk-two").value);
+   var ck = parseFloat(document.getElementById("ck-two").value);
+   var dk = parseFloat(document.getElementById("dk-two").value);
+   var ek = parseFloat(document.getElementById("ek-two").value);
+   var fk = parseFloat(document.getElementById("fk-two").value);
+ 
+   if (isNaN(ak) == true) ak = 0;
+   if (isNaN(bk) == true) bk = 0;
+   if (isNaN(ck) == true) ck = 0;
+   if (isNaN(dk) == true) dk = 0;
+   if (isNaN(ek) == true) ek = 0;
+   if (isNaN(fk) == true) fk = 0;
+ 
+   var principalDebt = parseFloat (ak) / parseFloat (ck); // Расчет суммы основного долга
+   var percentages = parseFloat (ak) * parseFloat (bk) * 30 / 360 / 100; //Расчет суммы процентов годовых
+   var calculation = principalDebt + percentages; //Основной долг + проценты
+   var allRashody = parseFloat (dk) + parseFloat (ek);
+   var koeff = (allRashody + calculation) / fk;
+ 
+   document.getElementById("resultTwoAdapt").innerHTML = monthlyPayment + ' ' + ( koeff.toFixed(2) );
+ }
 
  function maxAmoutZeroFourTwo() {
   var maxAmout = 'Максимальная сумма кредита:';
@@ -109,6 +159,50 @@ function creditTwo() {
   document.getElementById("resultThree").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
 }
 
+
+// Адаптив
+
+
+function maxAmoutZeroFourTwoAdapt() {
+   var maxAmout = 'Максимальная сумма кредита:';
+   var am = parseFloat(document.getElementById("am-two").value); // Размер дохода заявителя
+   var bm = parseFloat(document.getElementById("bm-two").value); // Расходы на коммунальные услуги и мобильную связь
+   var cm = parseFloat(document.getElementById("cm-two").value); // Расходы на ДКХ
+   var dm = parseFloat(document.getElementById("dm-two").value); // Количество иждивенцев
+   var em = parseFloat(document.getElementById("em-two").value); // Срок кредита
+   var fm = parseFloat(document.getElementById("fm-two").value); // Процентная ставка
+ 
+   if (isNaN(am) == true) am = 0;
+   if (isNaN(bm) == true) bm = 0;
+   if (isNaN(cm) == true) cm = 0;
+   if (isNaN(dm) == true) dm = 0;
+   if (isNaN(em) == true) em = 0;
+   if (isNaN(fm) == true) fm = 0;
+ 
+   var bpm = 341.48;
+   var ratio = 0.4;
+   var maxProd = 10000;
+   var minProd = 200;
+   var nbrb = parseFloat (am) * parseFloat (ratio) - parseFloat (cm) - parseFloat (bm); // Платеж НБ РБ
+   var bank = parseFloat (am) - parseFloat (bm) - parseFloat (cm) - parseFloat (bpm) * (1 + 0.2 * parseFloat (dm)); // Платеж БАНК
+   var amoutNbrb = parseFloat (nbrb) * 1200 * parseFloat (em) / (1200 + parseFloat (fm) * parseFloat (em)); // Сумма НБ РБ
+   var amoutBank = parseFloat (bank) * 1200 * parseFloat (em) / (1200 + parseFloat (fm) * parseFloat (em)); // Сумма БАНК
+   var result = Math.min(amoutNbrb, amoutBank, maxProd);
+   var yesOrNo = ((result < minProd));
+   if (yesOrNo) {
+   yesOrNo = 0;
+   }
+   else {
+   yesOrNo = result;
+   }
+   var monthlyPayment = 'Ежемесячный платеж:';
+   var principalDebt = parseFloat (yesOrNo) / parseFloat (em); // Расчет суммы основного долга
+   var percentages = parseFloat (yesOrNo) * parseFloat (fm) * 30 / 360 / 100; //Расчет суммы процентов годовых
+   var calculation = principalDebt + percentages; //Основной долг + проценты
+ 
+   document.getElementById("resultThreeAdapt").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
+ }
+
  function maxAmoutZeroFourThree() {
   var maxAmout = 'Максимальная сумма кредита:';
   var ams = parseFloat(document.getElementById("ams").value); // Размер дохода заявителя
@@ -146,9 +240,55 @@ function creditTwo() {
   var percentages = parseFloat (yesOrNo) * parseFloat (fms) * 30 / 360 / 100; //Расчет суммы процентов годовых
   var calculation = principalDebt + percentages; //Основной долг + проценты
 
-
   document.getElementById("resultFour").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
 }
+
+
+// Адаптив
+
+
+function maxAmoutZeroFourThreeAdapt() {
+   var maxAmout = 'Максимальная сумма кредита:';
+   var ams = parseFloat(document.getElementById("ams-two").value); // Размер дохода заявителя
+   var bms = parseFloat(document.getElementById("bms-two").value); // Расходы на коммунальные услуги и мобильную связь
+   var cms = parseFloat(document.getElementById("cms-two").value); // Расходы на ДКХ
+   var dms = parseFloat(document.getElementById("dms-two").value); // Количество иждивенцев
+   var ems = parseFloat(document.getElementById("ems-two").value); // Срок кредита
+   var fms = parseFloat(document.getElementById("fms-two").value); // Процентная ставка
+ 
+   if (isNaN(ams) == true) ams = 0;
+   if (isNaN(bms) == true) bms = 0;
+   if (isNaN(cms) == true) cms = 0;
+   if (isNaN(dms) == true) dms = 0;
+   if (isNaN(ems) == true) ems = 0;
+   if (isNaN(fms) == true) fms = 0;
+ 
+   var bpm = 341.48;
+   var ratio = 0.6;
+   var maxProd = 10000;
+   var minProd = 200;
+   var nbrb = parseFloat (ams) * parseFloat (ratio) - parseFloat (cms) - parseFloat (bms); // Платеж НБ РБ
+   var bank = parseFloat (ams) - parseFloat (bms) - parseFloat (cms) - parseFloat (bpm) * (1 + 0.2 * parseFloat (dms)); // Платеж БАНК
+   var amoutNbrb = parseFloat (nbrb) * 1200 * parseFloat (ems) / (1200 + parseFloat (fms) * parseFloat (ems)); // Сумма НБ РБ
+   var amoutBank = parseFloat (bank) * 1200 * parseFloat (ems) / (1200 + parseFloat (fms) * parseFloat (ems)); // Сумма БАНК
+   var result = Math.min(amoutNbrb, amoutBank, maxProd);
+   var yesOrNo = ((result < minProd));
+   if (yesOrNo) {
+   yesOrNo = 0;
+   }
+   else {
+   yesOrNo = result;
+   }
+   var monthlyPayment = 'Ежемесячный платеж:';
+   var principalDebt = parseFloat (yesOrNo) / parseFloat (ems); // Расчет суммы основного долга
+   var percentages = parseFloat (yesOrNo) * parseFloat (fms) * 30 / 360 / 100; //Расчет суммы процентов годовых
+   var calculation = principalDebt + percentages; //Основной долг + проценты
+ 
+   document.getElementById("resultFourAdapt").innerHTML = maxAmout + ' ' + yesOrNo + '\n' + monthlyPayment + ' ' + ( calculation.toFixed(2) );
+ }
+
+
+
 
  var organizationsH={};
 

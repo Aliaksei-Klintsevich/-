@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Main_three.css">
+    <link rel="stylesheet" href="Main_four.css">
     <link rel="stylesheet" href="Header_one.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="Normalize.css">
-    <script src='Main-three.js'></script>
+    <script src='Main-four.js'></script>
 </head>
 <body>
     <header class="header" id="UP">
@@ -2901,7 +2901,7 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
  <h2 class="main-h-prod">
    Расчет кредитоспособности
 </h2>
- <div class="btn">
+ <div class="btn-two">
    <ul class="btn-item">
       <li>
          <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
@@ -3005,6 +3005,114 @@ m-1749 -795 c68 -20 185 -47 260 -61 74 -13 146 -31 158 -39 39 -26 53 -58 74
       </li>
    </ul>
 </div>
+<div class="btn-two-adapt">
+   <ul class="btn-item">
+      <li>
+         <a href="https://fincalculator.ru/kalkulyator-dnej?ysclid=l6xe21axvu75845627" target="_blank">Расчет количества месяцев между датами</a>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет ежемесячного платежа
+            </summary>
+            <form>
+               <br>
+               Сумма договора
+               <input id="a-two" type="text" placeholder="Введите значение"><br>
+               Процентная ставка
+               <input id="b-two" type="text" placeholder="Введите значение"><br>
+               Количество месяцев
+               <input id="c-two" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Рассчитать" onclick="creditTwoAdapt();"><br><br>
+             </form>
+             <div id="resultAdapt"></div>
+         </details>
+      </li>
+   </ul>
+</div>
+<div class="btn-two-adapt">
+   <ul class="btn-item">
+      <li>
+         <details>
+            <summary>
+               Расчет коэффициента кредитоспособности
+            </summary>
+            <form>
+               <br>
+               Сумма договора
+               <input id="ak-two" type="text" placeholder="Введите значение"><br>
+               Процентная ставка
+               <input id="bk-two" type="text" placeholder="Введите значение"><br>
+               Количество месяцев
+               <input id="ck-two" type="text" placeholder="Введите значение"><br>
+               Расходы на коммунальные услуги и мобильную связь
+               <input id="dk-two" type="text" placeholder="Введите значение"><br>
+               Расходы на ДКХ
+               <input id="ek-two" type="text" placeholder="Введите значение"><br>
+               Размер дохода заявителя
+               <input id="fk-two" type="text" placeholder="Введите значение"><br>
+               <br>
+               <input type="button" value="Рассчитать" onclick="ratioTwoAdapt();"><br><br>
+             </form>
+             <div id="resultTwoAdapt"></div>
+         </details>
+      </li>
+      <li>
+         <details>
+            <summary>
+               Расчет максимальной суммы кредита
+            </summary><br>
+            <details>
+               <summary>
+                  Под коэффициент 0,4
+               </summary>
+               <form>
+                  <br>
+                  Размер дохода заявителя
+                  <input id="am-two" type="text" placeholder="Введите значение"><br>
+                  Расходы на коммунальные услуги и мобильную связь
+                  <input id="bm-two" type="text" placeholder="Введите значение"><br>
+                  Расходы на ДКХ
+                  <input id="cm-two" type="text" placeholder="Введите значение"><br>
+                  Количество иждивенцев
+                  <input id="dm-two" type="text" placeholder="Введите значение"><br>
+                  Срок кредита
+                  <input id="em-two" type="text" placeholder="Введите значение"><br>
+                  Процентная ставка
+                  <input id="fm-two" type="text" placeholder="Введите значение"><br>
+                  <br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourTwoAdapt();"><br><br>
+                </form>
+                <div id="resultThreeAdapt"></div>
+            </details><br>
+            <details>
+               <summary>
+                  Под коэффициент 0,6
+               </summary>
+               <form>
+                  <br>
+                  Размер дохода заявителя
+                  <input id="ams-two" type="text" placeholder="Введите значение"><br>
+                  Расходы на коммунальные услуги и мобильную связь
+                  <input id="bms-two" type="text" placeholder="Введите значение"><br>
+                  Расходы на ДКХ
+                  <input id="cms-two" type="text" placeholder="Введите значение"><br>
+                  Количество иждивенцев
+                  <input id="dms-two" type="text" placeholder="Введите значение"><br>
+                  Срок кредита
+                  <input id="ems-two" type="text" placeholder="Введите значение"><br>
+                  Процентная ставка
+                  <input id="fms-two" type="text" placeholder="Введите значение"><br>
+                  <br>
+                  <input type="button" value="Рассчитать" onclick="maxAmoutZeroFourThreeAdapt();"><br><br>
+                </form>
+                <div id="resultFourAdapt"></div>
+            </details>
+         </details>
+      </li>
+   </ul>
+</div>      
  
    <h2 class="main-h-prod" id="contact">
       Контактная информация

@@ -141,6 +141,9 @@ width: 75%;
 font-size: 20px;
 text-align: center;
 }
+.table-passport-adapt {
+  display: none;
+}
 .table-style-app { 
   border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
   margin: 0 auto;
@@ -232,6 +235,9 @@ margin-top: 90px;
 .btn-adapt {
   display: none;
 }
+.btn-two-adapt {
+  display: none;
+}
 .btn-item li {
 padding: 15px;
 background-color: #00008B;
@@ -315,9 +321,17 @@ display: flex;
 display: flex;
 justify-content: space-around;
 }
+.table-contact-with {
+  width: 20%;
+}
 .map-main {
   position: relative;
   overflow: hidden;
+}
+.map-main-size {
+  width: 900px;
+  height: 435px;
+  position: relative;
 }
 .map-adapt {
   position: relative;
@@ -692,6 +706,9 @@ display: none;
   width: 900px;
   margin: 0 auto;
 }
+.table-style-passport {
+  width: 85%;
+}
 }
 @media screen and (max-width:1530px)
 {
@@ -726,6 +743,15 @@ display: none;
     height: 560px;
     margin-top: -560px;
   }
+  .table-style-passport {
+    width: 90%;
+  }
+}
+@media screen and (max-width:1240px)
+{
+  .table-style-passport {
+    width: 95%;
+  }
 }
 @media screen and (max-width:1200px)
 {
@@ -742,6 +768,18 @@ display: none;
   .bg-main {
     height: 530px;
     margin-top: -530px;
+  }
+  .btn-two {
+    display: none;
+  }
+  .btn-two-adapt {
+    display: block;
+  }
+  .table-passport-main {
+    display: none;
+  }
+  .table-passport-adapt {
+    display: block;
   }
 }
 @media screen and (max-width:1100px)
@@ -796,7 +834,13 @@ display: none;
   .logo-main {
     display: none;
   }
-}
+  .table-style-contact {
+    width: 800px;
+  }
+  .map-main {
+    width: 800px;
+  }
+  }
 @media screen and (max-width:830px)
 {
   .logo-text-top {
@@ -826,6 +870,27 @@ display: none;
   }
   .logo-main {
     display: none;
+  }
+  .table-contact-with {
+    width: 22%;
+  }
+  .table-style-contact {
+    width: 700px;
+  }
+  .map-main {
+    width: 700px;
+  }
+}
+@media screen and (max-width:730px)
+{
+  .table-style-contact {
+    width: 600px;
+  }
+  .table-contact-with {
+    width: 25%;
+  }
+  .map-main {
+    width: 600px;
   }
 }
 @media screen and (max-width:720px)
@@ -876,10 +941,19 @@ display: none;
     margin-top: -10px;
   }
   .table-values {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
-  .main-h-prod {
-    margin-top: -20px;
+}
+@media screen and (max-width:630px)
+{
+  .table-style-contact {
+    width: 500px;
+  }
+  .table-contact-with {
+    width: 32%;
+  }
+  .map-main {
+    width: 500px;
   }
 }
 @media screen and (max-width:600px)
@@ -915,6 +989,30 @@ display: none;
   .logo-main {
     display: none;
   }
+  .btn-item {
+    flex-direction: column;
+  }
+  .btn-two-adapt {
+    display: flex;
+    justify-content: center;
+  }
+  .btn-item li {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width:530px)
+{
+  .table-style-contact {
+    width: 400px;
+    font-size: 15px;
+  }
+  .map-main {
+    width: 400px;
+  }
+  .table-style-passport {
+    font-size: 15px;
+    width: 99%;
+  } 
 }
 @media screen and (max-width:495px)
 {
@@ -952,6 +1050,20 @@ display: none;
   .table-values-adapt {
     width: 160px;
   }
+}
+@media screen and (max-width:495px)
+{
+  .table-style-contact {
+    width: 350px;
+    font-size: 13px;
+  }
+  .map-main {
+    width: 350px;
+  }
+  .table-style-passport {
+    font-size: 14px;
+    width: 99%;
+  }  
 }
 
 

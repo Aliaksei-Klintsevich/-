@@ -232,6 +232,9 @@ margin-top: 90px;
 .btn-adapt {
   display: none;
 }
+.btn-two-adapt {
+  display: none;
+}
 .btn-item li {
 padding: 15px;
 background-color: #00008B;
@@ -743,6 +746,12 @@ display: none;
     height: 530px;
     margin-top: -530px;
   }
+  .btn-two {
+    display: none;
+  }
+  .btn-two-adapt {
+    display: block;
+  }
 }
 @media screen and (max-width:1100px)
 {
@@ -865,11 +874,8 @@ display: none;
     display: none;
   }
   .btn-adapt {
-    display: block;
-    position: relative;
-    width: 300px;
-    height: 400px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
   .btn-item-adapt {
     display: flex;
@@ -879,10 +885,7 @@ display: none;
     margin-top: -10px;
   }
   .table-values {
-    margin-bottom: 60px;
-  }
-  .main-h-prod {
-    margin-top: -60px;
+    margin-bottom: 80px;
   }
 }
 @media screen and (max-width:600px)
@@ -917,6 +920,16 @@ display: none;
   }
   .logo-main {
     display: none;
+  }
+  .btn-item {
+    flex-direction: column;
+  }
+  .btn-two-adapt {
+    display: flex;
+    justify-content: center;
+  }
+  .btn-item li {
+    margin-top: 0;
   }
 }
 @media screen and (max-width:495px)
