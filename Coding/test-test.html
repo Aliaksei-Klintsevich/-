@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="getcode">
+        <form method="post">
+        <textarea name="content">
+        Наполняемый контент, другие div блоки 
+        </textarea>
+        <input type="submit" value="Сохранить на html файл" name="otpravit"></input>
+        </form>
+        </div>
+        <script>
+            if (isset($_POST['otpravit']))
+{
+$content = $_POST['content'];
+}
+$newFileName = "getcode.html";
+$newFileContent = $content;
+
+if(file_put_contents($newFileName,$newFileContent)!=false){
+
+}else{
+
+}
+        </script>
+    <div class="getcode">Наполняемый контент, другие div блоки</div>
+<button>Получить и сохранить сожержимое</button>
+
+<script>
+    var button = document.querySelector("button");
+    button.addEventListener("click", sendSave, false);
+
+    function sendSave() {
+        var data = document.querySelector(".getcode").innerHTML;
+
+        var formData = new FormData();
+        formData.append("data", data);
+
+        var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
+        var xhr = new XHR();
+        xhr.open('POST', 'save.php', true);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            }
+            if (xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send(formData);
+    }
+</script><div class="getcode">Наполняемый контент, другие div блоки</div>
+<button>Получить и сохранить сожержимое</button>
+
+<script>
+    var button = document.querySelector("button");
+    button.addEventListener("click", sendSave, false);
+
+    function sendSave() {
+        var data = document.querySelector(".getcode").innerHTML;
+
+        var formData = new FormData();
+        formData.append("data", data);
+
+        var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
+        var xhr = new XHR();
+        xhr.open('POST', 'save.php', true);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            }
+            if (xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send(formData);
+    }
+</script>
+<?php echo
+    $fp = fopen(date('Ymdhis').'-data.html', 'w');
+
+    echo (fwrite($fp, $_POST['data'])) ? "Сохранено" : "Не сохранено";
+
+    fclose($fp); ?>
+</body>
+</html>
