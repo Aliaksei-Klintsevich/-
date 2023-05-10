@@ -1,0 +1,36 @@
+.black-style {
+    overflow-y: scroll;
+    height: 800px;
+    width: 47%;
+}
+.r-list-table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+}
+.r-list-item {
+    display: flex;
+    margin-top: 110px;
+}
+.r-contact-head {
+    font-size: 22px;
+    font-weight: bold;
+}
+.r-contact {
+    margin: 0 auto;
+}
+.correct {
+    margin-top: 30px;
+}
+.btn-r-list li {
+    padding: 15px;
+    background-color: #00008B;
+    color: #FFFFFF;
+    width: 260px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-r-list li:hover {
+    background-color: #8B0000;
+}
