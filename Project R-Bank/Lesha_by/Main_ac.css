@@ -658,7 +658,7 @@ input.SRadioFolder:checked + label + div {
     margin-top: -630px;
   }
 }
-@media screen and (max-width:1580px)
+@media screen and (max-width:1645px)
 {
   input.SRadioFolder + label {
     display: flex;
