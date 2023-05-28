@@ -1,0 +1,70 @@
+body {
+    background-color: #fafafa;
+    margin: 0;
+  }
+  p, ul {
+     margin: 0;
+  }
+  a {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+  }
+.term {
+    font-weight: bold;   /*Терминология*/
+    font-size: 16px;
+ }
+ p, li, table {
+    font-family: 'Segoe UT', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ h2 {
+    text-align: center;
+    font-size: 32px;
+ }
+ .main-h {
+   margin-top: 100px;
+   font-size: 48px;
+   margin-bottom: 80px;
+ }
+ .table-style { 
+    border-collapse: collapse;   /*Таблица*/
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+ }
+ .table-style-app { 
+    border-collapse: collapse;   /*Таблица (Приложение 2,3)*/
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+  .text-i {
+    font-style: italic;
+ }
+ .text-underline {
+    text-decoration: underline;   /*Подчеркнутый текст*/
+ }
+ .table-header {
+    font-weight: bold;   /*Заголовок таблицы*/
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .fix {
+    background-color: #FFFFFF;
+    text-align:center;
+    position:fixed;
+    right:10px;
+    border: 2px solid black;
+    bottom: 10px;
+    }
+    .fix:hover {
+    background-color: #00008B;
+    }
+    .fix-href:hover {
+    color: #FFFFFF;
+    }
+    .fix-href {
+    font-size: 40px;
+    }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        legend {
+            background: tomato;
+            color: white;
+        }
+        table {
+            text-align: center;
+        }
+        td {
+            width: 50px;
+            height: 20px;
+        }
+        td.col {
+            background: lightblue;
+        }
+        td.row {
+            background: lightgreen;
+        }
+        td.tot {
+            background: darkorange;
+            color: white;
+        }
+        td.gto {
+            background: khaki;
+        }
+        #databox {
+            width: 360px;
+            padding: 5px;
+            margin: auto;
+        }
+        #editbox {
+            width: 360px;
+            padding: 5px;
+            margin: auto;
+            border: 1px solid tomato;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="databox">
+        <table>
+            <tr>
+                <td></td>
+                <td class="col">1</td>
+                <td class="col">2</td>
+                <td class="col">3</td>
+                <td class="col">4</td>
+                <td class="col">5</td>
+                <td class="tot">Total</td>
+            </tr>
+            <tr>
+                <td class="row">1</td>
+                <td id="n0"></td>
+                <td id="n1"></td>
+                <td id="n2"></td>
+                <td id="n3"></td>
+                <td id="n4"></td>
+                <td id="rt1" class="tot"></td>
+            </tr>
+            <tr>
+                <td class="row">2</td>
+                <td id="n5"></td>
+                <td id="n6"></td>
+                <td id="n7"></td>
+                <td id="n8"></td>
+                <td id="n9"></td>
+                <td id="rt2" class="tot"></td>
+            </tr>
+            <tr>
+                <td class="row">3</td>
+                <td id="n10"></td>
+                <td id="n11"></td>
+                <td id="n12"></td>
+                <td id="n13"></td>
+                <td id="n14"></td>
+                <td id="rt3" class="tot"></td>
+            </tr>
+            <tr>
+                <td class="tot">Total</td>
+                <td id="ct1" class="tot"></td>
+                <td id="ct2" class="tot"></td>
+                <td id="ct3" class="tot"></td>
+                <td id="ct4" class="tot"></td>
+                <td id="ct5" class="tot"></td>
+                <td id="gt" class="gto"></td>
+            </tr>
+        </table>
+    </div>
+    <form action="#">
+        <fieldset id="editbox">
+            <legend id="legend">Cell Editor</legend>
+            <div>
+                <select id="rownum">
+                    <option selected="selected">Row</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <select id="colnum">
+                    <option selected="selected">Column</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                New Value
+                <input id="newval" type="text" size="5" value="">
+                <input type="button" value="Update" onclick="update()">
+            </div>
+        </fieldset>
+    </form>
+    <script>
+        fetch('https://lesha.by/htdocs/data.json')
+            .then(response => response.json())
+            .then(cells => fill(cells))
+            .catch(err => console.log(err))
+
+        function fill(cells) {
+            const values = Object.values(cells)
+            let i = 0
+            while(i < values.length)
+            {
+                document.getElementById('n' + i).innerText = 
+                values[i].toFixed(2)
+                i++
+            } 
+            function total() {
+                let i = 0
+                let sum = 0
+                let rownum = 1
+                let colnum = 0
+                for (i = 0; i < 15; i++)
+            {
+                sum += parseFloat(document.getElementById('n' + i).innerText)
+                if( (i + 1) % 5 === 0)
+                {
+                    document.getElementById ('rt' + rownum).innerText = sum.toFixed(2)
+                    rownum++
+                    sum = 0
+                }
+            }
+            while (colnum !== 5)
+            {
+                for (i = 0; i < 15; i++)
+                {
+                    if (i % 5 === 0) sum += parseFloat(document.getElementById('n' + (i + colnum)).innerText)
+                }
+                colnum++
+                document.getElementById('ct' + colnum).innerText = sum.toFixed(2)
+                sum = 0
+            }
+            for (i = 0; i < 15; i++)
+            {
+                sum += parseFloat(document.getElementById('n' + i).innerText)
+            }
+            document.getElementById('gt').innerText = sum.toFixed(2)
+            }
+        }
+        function update() {
+            let row = document.getElementById('rownum').options.selectedIndex
+            let col = document.getElementById('colnum').options.selectedIndex
+            let newval = parseFloat(document.getElementById('newval').value)
+            let legend = document.getElementById('legend')
+            let target = null
+
+            if(row === 0) {legend.innerText = 'Select a row'; return}
+            if(col === 0) {legend.innerText = 'Select a colnum'; return}
+            if( !newval) {legend.innerText = 'Enter a value'; return}
+            if(isNaN(newval)) {legend.innerText = 'Enter a number'; return}
+
+            target = (((row - 1) * 5) + col) - 1
+            document.getElementById('n' + target).innerText = newval.toFixed(2)
+            total()
+            document.getElementById('rownum').options[ 0 ].selected = true
+            document.getElementById('colnum').options[ 0 ].selected = true
+            document.getElementById('newval').value = ''
+            legend.innerText = 'Cell Editor'
+        }
+
+
+
+        // Создание объекта XMLHttpRequest
+var xhr = new XMLHttpRequest();
+// Открытие соединения с сервером
+xhr.open("POST", "save.php", true);
+// Установка заголовков запроса
+xhr.setRequestHeader("Content-Type", "application/json");
+// Обработка ответа от сервера
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(xhr.responseText);
+    }
+};
+// Отправка данных на сервер в формате JSON
+var data = { name: "John", age: 30 };
+xhr.send(JSON.stringify(data));
+    </script>
+</body>
+</html>
